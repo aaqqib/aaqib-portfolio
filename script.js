@@ -92,14 +92,12 @@ if (form) {
       });
 
       if (res.ok) {
-        btn.textContent = '✓ Message Sent!';
+        btn.textContent = '✓ Redirecting…';
         btn.style.background = '#2a9d3c';
         form.reset();
         setTimeout(() => {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 4000);
+          window.location.href = 'thankyou.html';
+        }, 800);
       } else {
         throw new Error('Failed');
       }
