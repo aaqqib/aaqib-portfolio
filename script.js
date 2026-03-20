@@ -107,3 +107,28 @@ if (form) {
     }
   });
 }
+// ── MOBILE MENU ────────────────────────────────────────────
+const hamburger = document.getElementById('navHamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileMenuOverlay');
+const mobileClose = document.getElementById('mobileMenuClose');
+
+function openMenu() {
+  mobileMenu.classList.add('open');
+  mobileOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  mobileOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if (hamburger) hamburger.addEventListener('click', openMenu);
+if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+// Close on nav link click
+document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
