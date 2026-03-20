@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aaqib Bhat | SEO Specialist</title>
-  <meta name="description" content="Aaqib Bhat — SEO Specialist focused on organic growth, rankings, and measurable results." />
+  <title>Aaqib Bhat | SEO Specialist — Kashmir & UAE</title>
+  <meta name="description" content="Aaqib Bhat — SEO Specialist helping travel, e-commerce and service businesses grow organic traffic and rank on Page 1." />
   <meta name="google-site-verification" content="kI2_ldk2hYYvuxytcwmenlSrFF6X1YKfPyHXjyv_Bf8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,6 @@
 </script>
 <body>
 
-  <!-- CURSOR -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
@@ -34,7 +33,11 @@
         <li><a href="#work">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+      <div class="nav-right">
+        <!-- Replace href with your actual PDF path when ready -->
+        <a href="assets/resume.pdf" download class="btn-cv">Download CV</a>
+        <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+      </div>
     </div>
   </nav>
 
@@ -42,7 +45,6 @@
   <section class="hero" id="top">
     <div class="hero-bg-grid"></div>
     <div class="hero-noise"></div>
-
     <div class="hero-inner">
       <div class="hero-badge reveal">
         <span class="badge-dot"></span>
@@ -60,9 +62,9 @@
         <a href="#work" class="btn-primary">View Case Studies</a>
         <a href="#contact" class="btn-ghost">Let's Talk</a>
       </div>
-    </div><!-- /hero-inner -->
+    </div>
 
-    <!-- FUN FLOATING SHAPES -->
+    <!-- Floating shapes -->
     <div class="hero-float-zone" aria-hidden="true">
       <div class="hf hf-circle"></div>
       <div class="hf hf-donut"></div>
@@ -79,10 +81,9 @@
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
+  </section>
 
-  </section><!-- /hero -->
-
-  <!-- MARQUEE STRIP -->
+  <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
       <span>Keyword Research</span><span class="mx">·</span>
@@ -94,14 +95,9 @@
       <span>Google Search Console</span><span class="mx">·</span>
       <span>Schema Markup</span><span class="mx">·</span>
       <span>Google Analytics</span><span class="mx">·</span>
-      <span>Google Looker Studio</span><span class="mx">·</span>
       <span>Ahrefs</span><span class="mx">·</span>
       <span>Semrush</span><span class="mx">·</span>
       <span>Screaming Frog</span><span class="mx">·</span>
-      <span>Surfer SEO</span><span class="mx">·</span>
-      <span>Google Tag Manager</span><span class="mx">·</span>
-      <span>Notion</span><span class="mx">·</span>
-      <!-- duplicate for seamless loop -->
       <span>Keyword Research</span><span class="mx">·</span>
       <span>Technical SEO</span><span class="mx">·</span>
       <span>On-Page Optimization</span><span class="mx">·</span>
@@ -118,31 +114,45 @@
     <div class="container">
       <div class="section-label reveal">About me</div>
       <div class="about-grid">
+
         <div class="about-left reveal">
+          <!--
+            PHOTO: Replace assets/photo.jpg with your actual photo.
+            If the image fails to load, initials "AB" will show instead.
+          -->
+          <div class="about-photo-wrap" id="photoWrap">
+            <img src="assets/photo.jpg" alt="Aaqib Bhat — SEO Specialist" class="about-photo"
+              onerror="document.getElementById('photoWrap').classList.add('photo-fallback')" />
+            <div class="photo-initials">AB</div>
+          </div>
           <h2 class="section-title">I make websites<br><em>findable.</em></h2>
         </div>
+
         <div class="about-right reveal">
+          <p class="about-location">📍 Based in Kashmir · Working with clients across South Asia &amp; the Middle East</p>
           <p class="about-body">
-            I'm an SEO Specialist with hands-on experience turning under-performing websites into organic traffic machines. My work spans keyword research, technical audits, on-page optimization, and content strategy — always anchored to measurable business outcomes.
+            I'm an SEO Specialist with hands-on experience turning under-performing websites into organic traffic machines. I focus on two niches I know deeply — <strong>travel &amp; tourism</strong> and <strong>e-commerce</strong> — where search intent is high and rankings translate directly into bookings and sales.
           </p>
           <p class="about-body">
             No vanity metrics. No inflated reports. Just rankings, traffic, and conversions that actually move the needle.
           </p>
+          <!-- UPDATE: Replace these with your real numbers -->
           <div class="about-stats">
             <div class="stat reveal">
-              <span class="stat-num">6+</span>
-              <span class="stat-label">Months avg. project</span>
+              <span class="stat-num">500%</span>
+              <span class="stat-label">Max traffic growth</span>
             </div>
             <div class="stat reveal">
-              <span class="stat-num">P1</span>
-              <span class="stat-label">Page 1 rankings</span>
+              <span class="stat-num">47+</span>
+              <span class="stat-label">Page 1 keywords</span>
             </div>
             <div class="stat reveal">
-              <span class="stat-num">↑</span>
-              <span class="stat-label">Measurable growth</span>
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Years experience</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -216,21 +226,76 @@
       <div class="case-study reveal">
         <div class="case-num">01</div>
         <div class="case-content">
+
           <div class="case-tags">
             <span class="tag">Technical SEO</span>
             <span class="tag">On-Page</span>
             <span class="tag">Content Strategy</span>
+            <span class="tag">Travel & Tourism</span>
           </div>
           <h3 class="case-title">Thrill Top Journeys</h3>
           <p class="case-desc">
-            Led end-to-end SEO strategy for a competitive travel agency in Kashmir. Targeted high-intent service keywords with a mix of technical fixes, content improvements, and internal linking restructure.
+            A Kashmir-based travel agency struggling to appear in search for their core tour packages. I took over full SEO strategy — starting from near-zero — and rebuilt their organic presence from the ground up.
           </p>
-          <ul class="case-results">
-            <li><span class="result-icon">↑</span> Organic traffic growth by 500% over 6 months</li>
-            <li><span class="result-icon">✓</span> Multiple service keywords ranked on Page 1 of Google</li>
-            <li><span class="result-icon">✓</span> Technical SEO audit resolved 40+ critical errors</li>
-            <li><span class="result-icon">↑</span> Improved CTR through meta optimization</li>
-          </ul>
+
+          <!-- UPDATE: Replace with your real GSC numbers -->
+          <div class="case-metrics">
+            <div class="metric-card">
+              <span class="metric-num">500%</span>
+              <span class="metric-label">Organic traffic growth</span>
+              <span class="metric-period">over 6 months</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">40+</span>
+              <span class="metric-label">Critical errors fixed</span>
+              <span class="metric-period">in technical audit</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">P1</span>
+              <span class="metric-label">Service keywords ranked</span>
+              <span class="metric-period">on Google Page 1</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">↑ CTR</span>
+              <span class="metric-label">Click-through rate</span>
+              <span class="metric-period">via meta optimization</span>
+            </div>
+          </div>
+
+          <!-- How I did it -->
+          <div class="case-process">
+            <div class="process-label">How I did it</div>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                  <strong>Audit</strong>
+                  <p>Full technical crawl using Screaming Frog — identified 40+ critical issues including broken links, missing meta tags, duplicate content, and slow Core Web Vitals pulling rankings down.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                  <strong>Strategy</strong>
+                  <p>Mapped buyer-intent keywords for every tour package (e.g. "Kashmir honeymoon packages", "Gulmarg snow trek"). Built a topic cluster model with pillar pages and supporting content.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                  <strong>Execution</strong>
+                  <p>Rewrote all service pages with optimized structure, fixed internal linking, added schema markup for tours, and improved page speed — organic traffic grew 500% over 6 months.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UPDATE: Replace with a real quote from your client -->
+          <blockquote class="case-quote">
+            <p>"Aaqib completely transformed our online presence. We went from invisible on Google to getting daily enquiries through organic search."</p>
+            <cite>— Client, Thrill Top Journeys</cite>
+          </blockquote>
+
           <div class="case-evidence">
             <div class="evidence-label">📊 Project Screenshots</div>
             <div class="evidence-grid">
@@ -244,7 +309,7 @@
               </div>
               <div class="evidence-item">
                 <img src="assets/projects/thillopgsc.png" alt="Keyword Rankings" />
-                <span class="evidence-caption">Keyword Rankings — Ahrefs/Semrush</span>
+                <span class="evidence-caption">Keyword Rankings — Ahrefs</span>
               </div>
               <div class="evidence-item">
                 <img src="assets/projects/thillopgsc.png" alt="GA4 Traffic" />
@@ -252,6 +317,7 @@
               </div>
             </div>
           </div>
+
         </div><!-- /case-content -->
       </div><!-- /case-study 01 -->
 
@@ -259,6 +325,7 @@
       <div class="case-study reveal">
         <div class="case-num">02</div>
         <div class="case-content">
+
           <div class="case-tags">
             <span class="tag">E-commerce SEO</span>
             <span class="tag">Keyword Research</span>
@@ -266,14 +333,66 @@
           </div>
           <h3 class="case-title">Hola Keto</h3>
           <p class="case-desc">
-            Worked on organic search visibility for a niche keto e-commerce brand. Focused on buyer-intent keyword targeting, product page optimization, and blog content that drives purchase decisions.
+            A niche keto e-commerce brand with great products but almost no organic search visibility. The challenge: compete against established food blogs and big retailers in a crowded space.
           </p>
-          <ul class="case-results">
-            <li><span class="result-icon">✓</span> Buyer-intent keyword mapping for all product categories</li>
-            <li><span class="result-icon">↑</span> Organic impressions significantly improved</li>
-            <li><span class="result-icon">↑</span> CTR improved through optimized title/meta strategy</li>
-            <li><span class="result-icon">✓</span> Blog content structured as topic clusters for authority</li>
-          </ul>
+
+          <!-- UPDATE: Replace with your real numbers -->
+          <div class="case-metrics">
+            <div class="metric-card">
+              <span class="metric-num">↑ 3.8%</span>
+              <span class="metric-label">Avg. CTR improvement</span>
+              <span class="metric-period">after meta rewrite</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">Product pages optimized</span>
+              <span class="metric-period">buyer-intent keywords</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">↑</span>
+              <span class="metric-label">Organic impressions</span>
+              <span class="metric-period">significant growth</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">12</span>
+              <span class="metric-label">Blog posts published</span>
+              <span class="metric-period">topic cluster strategy</span>
+            </div>
+          </div>
+
+          <div class="case-process">
+            <div class="process-label">How I did it</div>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                  <strong>Research</strong>
+                  <p>Used Ahrefs and Semrush to map buyer-intent keywords across the full funnel — from "keto diet plan" (informational) to "buy keto snacks online" (transactional) for every product category.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                  <strong>On-page overhaul</strong>
+                  <p>Rewrote every product page title, meta description, H1, and body copy. Added structured data for products and FAQs to capture rich snippets in search results.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                  <strong>Content strategy</strong>
+                  <p>Built a topic cluster of 12 blog posts around high-volume keto keywords, each internally linking to relevant product pages — creating a content flywheel that builds authority over time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UPDATE: Replace with a real quote from your client -->
+          <blockquote class="case-quote">
+            <p>"Our product pages finally started showing up in search. Aaqib knew exactly what changes to make and explained every decision clearly."</p>
+            <cite>— Client, Hola Keto</cite>
+          </blockquote>
+
           <div class="case-evidence">
             <div class="evidence-label">📊 Project Screenshots</div>
             <div class="evidence-grid">
@@ -287,7 +406,7 @@
               </div>
               <div class="evidence-item">
                 <img src="assets/projects/keto-rankings.png" alt="Keyword Rankings" />
-                <span class="evidence-caption">Keyword Rankings — Ahrefs/Semrush</span>
+                <span class="evidence-caption">Keyword Rankings — Semrush</span>
               </div>
               <div class="evidence-item">
                 <img src="assets/projects/keto-traffic.png" alt="GA4 Traffic" />
@@ -295,13 +414,14 @@
               </div>
             </div>
           </div>
+
         </div><!-- /case-content -->
       </div><!-- /case-study 02 -->
 
     </div>
   </section>
 
-  <!-- TOOLS I USE -->
+  <!-- TOOLS -->
   <section class="tools section">
     <div class="container">
       <div class="section-label reveal">Toolkit</div>
@@ -315,9 +435,9 @@
         <div class="tool-pill reveal">PageSpeed Insights</div>
         <div class="tool-pill reveal">Surfer SEO</div>
         <div class="tool-pill reveal">Google Tag Manager</div>
+        <div class="tool-pill reveal">Looker Studio</div>
         <div class="tool-pill reveal">Notion</div>
         <div class="tool-pill reveal">ChatGPT / AI</div>
-        <div class="tool-pill reveal">Claude</div>
         <div class="tool-pill reveal">Canva</div>
       </div>
     </div>
@@ -345,6 +465,12 @@
               </div>
               <span>linkedin.com/in/aaqibbhat</span>
             </a>
+            <a href="assets/resume.pdf" download class="contact-item">
+              <div class="ci-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+              </div>
+              <span>Download my CV</span>
+            </a>
           </div>
           <p class="reply-note">⚡ I usually reply within 24 hours.</p>
         </div>
@@ -359,7 +485,7 @@
           <button type="submit" class="btn-primary full-width">Send Message →</button>
         </form>
 
-      </div><!-- /contact-grid -->
+      </div>
     </div>
   </section>
 
