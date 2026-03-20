@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Blog — Aaqib Bhat</title>
+  <meta name="description" content="SEO tips, case studies and strategies from Aaqib Bhat — SEO Specialist based in Kashmir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V33HZNWDBQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V33HZNWDBQ');
+</script>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Aaqib Bhat<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="blog.html" style="color:var(--text)">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="assets/resume.pdf" download class="btn-cv">Download CV</a>
+        <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="hero-bg-grid"></div>
+    <div class="container">
+      <div class="blog-hero-inner">
+        <div class="section-label reveal">SEO Writing</div>
+        <h1 class="blog-hero-title reveal">The SEO<br><em>Blog.</em></h1>
+        <p class="blog-hero-sub reveal">Practical SEO — keyword strategy, technical fixes,<br>and real lessons from real projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG POSTS GRID -->
+  <section class="blog-list section">
+    <div class="container">
+
+      <!--
+        ════════════════════════════════════════════════
+        HOW TO ADD A NEW POST:
+        1. Copy one <article class="blog-card"> block below
+        2. Update: href, title, date, category, excerpt
+        3. Create the matching HTML file in /blog/ folder
+           using blog-post-template.html as your base
+        ════════════════════════════════════════════════
+      -->
+
+      <!-- POST 1 — Featured (add class="blog-card--featured" to first post) -->
+      <article class="blog-card blog-card--featured reveal">
+        <a href="blog/seo-for-travel-agencies-kashmir.html" class="blog-card-link">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Travel SEO</span>
+            <span class="blog-date">March 2026</span>
+          </div>
+          <h2 class="blog-card-title">SEO for Travel Agencies in Kashmir: The Complete 2026 Guide</h2>
+          <p class="blog-card-excerpt">Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500%.</p>
+          <span class="blog-read-more">Read article →</span>
+        </a>
+      </article>
+
+      <!-- POSTS GRID (add more cards here) -->
+      <div class="blog-grid">
+
+        <!-- POST 2 -->
+        <article class="blog-card reveal">
+          <a href="blog/technical-seo-checklist-2026.html" class="blog-card-link">
+            <div class="blog-card-meta">
+              <span class="blog-tag">Technical SEO</span>
+              <span class="blog-date">March 2026</span>
+            </div>
+            <h2 class="blog-card-title">Technical SEO Checklist 2026: 25 Fixes That Actually Move Rankings</h2>
+            <p class="blog-card-excerpt">Most SEO checklists are bloated. This is the 25-point technical audit I run on every new client — the fixes that consistently move the needle.</p>
+            <span class="blog-read-more">Read article →</span>
+          </a>
+        </article>
+
+        <!--
+          TEMPLATE FOR FUTURE POSTS — copy and paste below:
+
+          <article class="blog-card reveal">
+            <a href="blog/your-post-slug.html" class="blog-card-link">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Category</span>
+                <span class="blog-date">Month Year</span>
+              </div>
+              <h2 class="blog-card-title">Your Post Title Here</h2>
+              <p class="blog-card-excerpt">A 1-2 sentence description of what the post covers.</p>
+              <span class="blog-read-more">Read article →</span>
+            </a>
+          </article>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Aaqib Bhat<span class="dot">.</span></span>
+      <span class="footer-copy">© 2026 Aaqib Bhat · SEO Specialist</span>
+      <a href="index.html" class="footer-back">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
