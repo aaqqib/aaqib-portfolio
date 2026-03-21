@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="blog.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V33HZNWDBQ"></script>
 <script>
@@ -54,66 +54,26 @@
     </div>
   </section>
 
-  <!-- BLOG POSTS GRID -->
+  <!-- BLOG POSTS — auto-rendered by JS -->
   <section class="blog-list section">
     <div class="container">
 
-      <!--
-        ════════════════════════════════════════════════
-        HOW TO ADD A NEW POST:
-        1. Copy one <article class="blog-card"> block below
-        2. Update: href, title, date, category, excerpt
-        3. Create the matching HTML file in /blog/ folder
-           using blog-post-template.html as your base
-        ════════════════════════════════════════════════
-      -->
-
-      <!-- POST 1 — Featured (add class="blog-card--featured" to first post) -->
-      <article class="blog-card blog-card--featured reveal">
-        <a href="blog/seo-for-travel-agencies-kashmir.html" class="blog-card-link">
-          <div class="blog-card-meta">
-            <span class="blog-tag">Travel SEO</span>
-            <span class="blog-date">March 2026</span>
-          </div>
-          <h2 class="blog-card-title">SEO for Travel Agencies in Kashmir: The Complete 2026 Guide</h2>
-          <p class="blog-card-excerpt">Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500%.</p>
-          <span class="blog-read-more">Read article →</span>
-        </a>
-      </article>
-
-      <!-- POSTS GRID (add more cards here) -->
-      <div class="blog-grid">
-
-        <!-- POST 2 -->
-        <article class="blog-card reveal">
-          <a href="blog/technical-seo-checklist-2026.html" class="blog-card-link">
-            <div class="blog-card-meta">
-              <span class="blog-tag">Technical SEO</span>
-              <span class="blog-date">March 2026</span>
-            </div>
-            <h2 class="blog-card-title">Technical SEO Checklist 2026: 25 Fixes That Actually Move Rankings</h2>
-            <p class="blog-card-excerpt">Most SEO checklists are bloated. This is the 25-point technical audit I run on every new client — the fixes that consistently move the needle.</p>
-            <span class="blog-read-more">Read article →</span>
-          </a>
-        </article>
-
-        <!--
-          TEMPLATE FOR FUTURE POSTS — copy and paste below:
-
-          <article class="blog-card reveal">
-            <a href="blog/your-post-slug.html" class="blog-card-link">
-              <div class="blog-card-meta">
-                <span class="blog-tag">Category</span>
-                <span class="blog-date">Month Year</span>
-              </div>
-              <h2 class="blog-card-title">Your Post Title Here</h2>
-              <p class="blog-card-excerpt">A 1-2 sentence description of what the post covers.</p>
-              <span class="blog-read-more">Read article →</span>
-            </a>
-          </article>
-        -->
-
+      <!-- Loading state -->
+      <div id="blog-loading" class="blog-loading">
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
       </div>
+
+      <!-- Posts render here -->
+      <div id="blog-featured"></div>
+      <div id="blog-grid" class="blog-grid"></div>
+
+      <!-- Empty state -->
+      <div id="blog-empty" class="blog-empty" style="display:none">
+        <p>No posts published yet. Check back soon.</p>
+      </div>
+
     </div>
   </section>
 
@@ -127,5 +87,108 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // ── AUTO-RENDER BLOG POSTS ──────────────────────────────
+    // Reads from /blog-index.json which is auto-generated
+    // by the CMS build script every time you publish a post
+
+    async function loadBlogPosts() {
+      const loading = document.getElementById('blog-loading');
+      const featured = document.getElementById('blog-featured');
+      const grid = document.getElementById('blog-grid');
+      const empty = document.getElementById('blog-empty');
+
+      try {
+        const res = await fetch('/blog-index.json?v=' + Date.now());
+        if (!res.ok) throw new Error('No index found');
+
+        const posts = await res.json();
+
+        if (!posts || posts.length === 0) {
+          loading.style.display = 'none';
+          empty.style.display = 'block';
+          return;
+        }
+
+        loading.style.display = 'none';
+
+        // First post = featured
+        const first = posts[0];
+        featured.innerHTML = `
+          <article class="blog-card blog-card--featured reveal">
+            <a href="${first.url}" class="blog-card-link">
+              <div class="blog-card-meta">
+                <span class="blog-tag">${first.category || 'SEO'}</span>
+                <span class="blog-date">${formatDate(first.date)}</span>
+              </div>
+              <h2 class="blog-card-title">${first.title}</h2>
+              <p class="blog-card-excerpt">${first.description || ''}</p>
+              <span class="blog-read-more">Read article →</span>
+            </a>
+          </article>
+        `;
+
+        // Rest = grid
+        const rest = posts.slice(1);
+        if (rest.length > 0) {
+          grid.innerHTML = rest.map(post => `
+            <article class="blog-card reveal">
+              <a href="${post.url}" class="blog-card-link">
+                <div class="blog-card-meta">
+                  <span class="blog-tag">${post.category || 'SEO'}</span>
+                  <span class="blog-date">${formatDate(post.date)}</span>
+                </div>
+                <h2 class="blog-card-title">${post.title}</h2>
+                <p class="blog-card-excerpt">${post.description || ''}</p>
+                <span class="blog-read-more">Read article →</span>
+              </a>
+            </article>
+          `).join('');
+        }
+
+        // Trigger reveal animations on new cards
+        document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+          el.classList.add('visible');
+        });
+
+      } catch (err) {
+        // Fallback — show hardcoded posts if no JSON index yet
+        loading.style.display = 'none';
+        featured.innerHTML = `
+          <article class="blog-card blog-card--featured reveal visible">
+            <a href="blog/seo-for-travel-agencies-kashmir.html" class="blog-card-link">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Travel SEO</span>
+                <span class="blog-date">March 2026</span>
+              </div>
+              <h2 class="blog-card-title">SEO for Travel Agencies in Kashmir: The Complete 2026 Guide</h2>
+              <p class="blog-card-excerpt">Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500%.</p>
+              <span class="blog-read-more">Read article →</span>
+            </a>
+          </article>
+        `;
+      }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    }
+
+    loadBlogPosts();
+  </script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>

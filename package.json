@@ -1,0 +1,12 @@
+{
+  "name": "aaqib-portfolio",
+  "version": "1.0.0",
+  "description": "Aaqib Bhat SEO Portfolio",
+  "scripts": {
+    "build": "node generate-blog-index.js",
+    "prebuild": "echo 'Generating blog index...'"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

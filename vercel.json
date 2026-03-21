@@ -1,12 +1,11 @@
 {
+  "buildCommand": "node generate-blog-index.js",
+  "outputDirectory": ".",
   "headers": [
     {
-      "source": "/admin/config.yml",
+      "source": "/blog-index.json",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/yaml"
-        }
+        { "key": "Cache-Control", "value": "no-cache" }
       ]
     }
   ]

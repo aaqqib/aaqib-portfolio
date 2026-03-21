@@ -305,3 +305,29 @@
   .blog-grid { grid-template-columns: 1fr; }
   .article-title { font-size: clamp(1.75rem, 6vw, 2.5rem); }
 }
+
+/* ── LOADING & EMPTY STATES ──────────────────────────────── */
+.blog-loading {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.loading-dot {
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: loadBounce 1.2s ease-in-out infinite;
+}
+.loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes loadBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+.blog-empty {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--text-dim);
+  font-size: 1rem;
+}
