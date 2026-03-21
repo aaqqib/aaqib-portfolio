@@ -79,7 +79,7 @@ try {
       date: data.date || new Date().toISOString(),
       category: data.category || 'SEO',
       description: data.description || '',
-      url: `blog/${filename}`,
+      url: `blog/post.html?slug=${filename.replace('.html', '')}`,
       slug: filename.replace('.html', '')
     });
   });

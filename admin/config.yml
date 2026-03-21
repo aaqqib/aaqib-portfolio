@@ -13,6 +13,7 @@ collections:
     slug: "{{slug}}"
     extension: html
     format: frontmatter
+    preview_path: "blog/post.html?slug={{slug}}"
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Date, name: date, widget: datetime}
