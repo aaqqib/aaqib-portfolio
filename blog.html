@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Blog — Aaqib Bhat</title>
+  <meta name="description" content="SEO tips, case studies and strategies from Aaqib Bhat — SEO Specialist based in Kashmir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V33HZNWDBQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V33HZNWDBQ');
+</script>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Aaqib Bhat<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="blog.html" style="color:var(--text)">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="assets/resume.pdf" download class="btn-cv">Download CV</a>
+        <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="hero-bg-grid"></div>
+    <div class="container">
+      <div class="blog-hero-inner">
+        <div class="section-label reveal">SEO Writing</div>
+        <h1 class="blog-hero-title reveal">The SEO<br><em>Blog.</em></h1>
+        <p class="blog-hero-sub reveal">Practical SEO — keyword strategy, technical fixes,<br>and real lessons from real projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG POSTS — auto-rendered by JS -->
+  <section class="blog-list section">
+    <div class="container">
+
+      <!-- Loading state -->
+      <div id="blog-loading" class="blog-loading">
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+      </div>
+
+      <!-- Posts render here -->
+      <div id="blog-featured"></div>
+      <div id="blog-grid" class="blog-grid"></div>
+
+      <!-- Empty state -->
+      <div id="blog-empty" class="blog-empty" style="display:none">
+        <p>No posts published yet. Check back soon.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Aaqib Bhat<span class="dot">.</span></span>
+      <span class="footer-copy">© 2026 Aaqib Bhat · SEO Specialist</span>
+      <a href="index.html" class="footer-back">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ── AUTO-RENDER BLOG POSTS ──────────────────────────────
+    // Reads from /blog-index.json which is auto-generated
+    // by the CMS build script every time you publish a post
+
+    async function loadBlogPosts() {
+      const loading = document.getElementById('blog-loading');
+      const featured = document.getElementById('blog-featured');
+      const grid = document.getElementById('blog-grid');
+      const empty = document.getElementById('blog-empty');
+
+      try {
+        const res = await fetch('/blog-index.json?v=' + Date.now());
+        if (!res.ok) throw new Error('No index found');
+
+        const posts = await res.json();
+
+        if (!posts || posts.length === 0) {
+          loading.style.display = 'none';
+          empty.style.display = 'block';
+          return;
+        }
+
+        loading.style.display = 'none';
+
+        // First post = featured
+        const first = posts[0];
+        featured.innerHTML = `
+          <article class="blog-card blog-card--featured reveal">
+            <a href="${first.url}" class="blog-card-link">
+              <div class="blog-card-meta">
+                <span class="blog-tag">${first.category || 'SEO'}</span>
+                <span class="blog-date">${formatDate(first.date)}</span>
+              </div>
+              <h2 class="blog-card-title">${first.title}</h2>
+              <p class="blog-card-excerpt">${first.description || ''}</p>
+              <span class="blog-read-more">Read article →</span>
+            </a>
+          </article>
+        `;
+
+        // Rest = grid
+        const rest = posts.slice(1);
+        if (rest.length > 0) {
+          grid.innerHTML = rest.map(post => `
+            <article class="blog-card reveal">
+              <a href="${post.url}" class="blog-card-link">
+                <div class="blog-card-meta">
+                  <span class="blog-tag">${post.category || 'SEO'}</span>
+                  <span class="blog-date">${formatDate(post.date)}</span>
+                </div>
+                <h2 class="blog-card-title">${post.title}</h2>
+                <p class="blog-card-excerpt">${post.description || ''}</p>
+                <span class="blog-read-more">Read article →</span>
+              </a>
+            </article>
+          `).join('');
+        }
+
+        // Trigger reveal animations on new cards
+        document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+          el.classList.add('visible');
+        });
+
+      } catch (err) {
+        // Fallback — show hardcoded posts if no JSON index yet
+        loading.style.display = 'none';
+        featured.innerHTML = `
+          <article class="blog-card blog-card--featured reveal visible">
+            <a href="blog/seo-for-travel-agencies-kashmir.html" class="blog-card-link">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Travel SEO</span>
+                <span class="blog-date">March 2026</span>
+              </div>
+              <h2 class="blog-card-title">SEO for Travel Agencies in Kashmir: The Complete 2026 Guide</h2>
+              <p class="blog-card-excerpt">Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500%.</p>
+              <span class="blog-read-more">Read article →</span>
+            </a>
+          </article>
+        `;
+      }
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    }
+
+    loadBlogPosts();
+  </script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

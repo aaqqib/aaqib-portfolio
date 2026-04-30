@@ -1,0 +1,12 @@
+{
+  "buildCommand": "node generate-blog-index.js",
+  "outputDirectory": ".",
+  "headers": [
+    {
+      "source": "/blog-index.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    }
+  ]
+}

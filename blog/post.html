@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading... — Aaqib Bhat</title>
+  <meta name="description" content="" id="meta-desc" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../blog.css" />
+  <!-- Marked.js for markdown rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Aaqib Bhat<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../blog.html" style="color:var(--text)">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="../assets/resume.pdf" download class="btn-cv">Download CV</a>
+        <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO — filled by JS -->
+  <header class="article-hero" id="article-hero">
+    <div class="container">
+      <a href="../blog.html" class="article-back">← Back to Blog</a>
+      <div class="article-meta">
+        <span class="blog-tag" id="post-category">SEO</span>
+        <span class="article-read-time" id="post-date"></span>
+      </div>
+      <h1 class="article-title" id="post-title">Loading...</h1>
+      <p class="article-intro" id="post-intro"></p>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY — filled by JS -->
+  <main class="article-body">
+    <div class="container">
+      <div class="article-content" id="post-body">
+        <!-- Loading state -->
+        <div style="display:flex;gap:.5rem;padding:2rem 0">
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Aaqib Bhat<span class="dot">.</span></span>
+      <span class="footer-copy">© 2026 Aaqib Bhat · SEO Specialist</span>
+      <a href="../blog.html" class="footer-back">← Back to Blog</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+  // ── POST RENDERER ───────────────────────────────────────
+  // Gets the slug from URL, fetches the raw HTML file,
+  // parses frontmatter + markdown, renders everything
+
+  async function loadPost() {
+    // Get slug from URL ?slug=post-name or from pathname
+    const params = new URLSearchParams(window.location.search);
+    let slug = params.get('slug');
+
+    // If no slug param, try to get from pathname
+    if (!slug) {
+      const path = window.location.pathname;
+      const parts = path.split('/');
+      slug = parts[parts.length - 1].replace('.html', '');
+    }
+
+    if (!slug || slug === 'post') {
+      showError('No post specified.');
+      return;
+    }
+
+    try {
+      // Fetch the raw blog post file
+      const res = await fetch(`/blog/${slug}.html`);
+      if (!res.ok) throw new Error('Post not found');
+
+      const raw = await res.text();
+
+      // Parse frontmatter
+      const fm = parseFrontmatter(raw);
+
+      // Set page title
+      document.title = `${fm.title} — Aaqib Bhat`;
+      document.getElementById('meta-desc').setAttribute('content', fm.description || '');
+
+      // Fill hero
+      document.getElementById('post-title').textContent = fm.title || 'Untitled';
+      document.getElementById('post-category').textContent = fm.category || 'SEO';
+      document.getElementById('post-intro').textContent = fm.description || '';
+
+      if (fm.date) {
+        const d = new Date(fm.date);
+        const readTime = estimateReadTime(fm.body);
+        document.getElementById('post-date').textContent =
+          `${readTime} min read · ${d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}`;
+      }
+
+      // Render body markdown → HTML
+      if (fm.body) {
+        const rendered = marked.parse(fm.body);
+        document.getElementById('post-body').innerHTML = rendered + authorBox();
+      } else {
+        document.getElementById('post-body').innerHTML = '<p>No content found.</p>';
+      }
+
+    } catch (err) {
+      showError('Post not found. <a href="../blog.html" style="color:var(--accent)">Back to blog →</a>');
+    }
+  }
+
+  function parseFrontmatter(raw) {
+    // Match --- frontmatter --- block
+    const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+    if (!match) {
+      // No frontmatter — try to extract from HTML
+      return extractFromHTML(raw);
+    }
+
+    const yamlStr = match[1];
+    const body = match[2].trim();
+    const data = { body };
+
+    yamlStr.split('\n').forEach(line => {
+      const colonIdx = line.indexOf(':');
+      if (colonIdx === -1) return;
+      const key = line.slice(0, colonIdx).trim();
+      let val = line.slice(colonIdx + 1).trim();
+      // Remove quotes
+      val = val.replace(/^["']|["']$/g, '');
+      data[key] = val;
+    });
+
+    return data;
+  }
+
+  function extractFromHTML(html) {
+    // Fallback for hand-written HTML posts
+    const titleMatch = html.match(/<h1[^>]*class="article-title"[^>]*>(.*?)<\/h1>/);
+    const descMatch = html.match(/<meta name="description" content="(.*?)"/);
+    const categoryMatch = html.match(/class="blog-tag"[^>]*>(.*?)<\/span>/);
+    const introMatch = html.match(/class="article-intro"[^>]*>(.*?)<\/p>/s);
+    const bodyMatch = html.match(/class="article-content"[^>]*>([\s\S]*?)<\/div>/);
+
+    return {
+      title: titleMatch ? titleMatch[1] : 'Post',
+      description: descMatch ? descMatch[1] : '',
+      category: categoryMatch ? categoryMatch[1] : 'SEO',
+      body: null,
+      _rawHTML: bodyMatch ? bodyMatch[1] : html
+    };
+  }
+
+  function estimateReadTime(text) {
+    if (!text) return 5;
+    const words = text.trim().split(/\s+/).length;
+    return Math.max(1, Math.ceil(words / 200));
+  }
+
+  function authorBox() {
+    return `
+      <div class="article-author">
+        <div class="author-avatar">
+          <img src="../assets/photo.jpg" alt="Aaqib Bhat"
+            onerror="this.style.display='none';this.parentElement.innerHTML='AB'" />
+        </div>
+        <div>
+          <div class="author-name">Aaqib Bhat</div>
+          <div class="author-bio">SEO Specialist based in Kashmir. I help travel agencies and e-commerce brands grow organic traffic and rank on Page 1 of Google.</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function showError(msg) {
+    document.getElementById('post-title').textContent = 'Oops.';
+    document.getElementById('post-body').innerHTML = `<p>${msg}</p>`;
+  }
+
+  loadPost();
+  </script>
+
+</body>
+</html>

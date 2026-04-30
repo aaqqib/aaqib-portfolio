@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: assets/blog-images
+public_folder: /assets/blog-images
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: blog
+    create: true
+    slug: "{{slug}}"
+    extension: html
+    format: frontmatter
+    preview_path: "blog/post.html?slug={{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Category, name: category, widget: select, options: [Travel SEO, Technical SEO, E-commerce SEO, Keyword Research, Content Strategy]}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Body, name: body, widget: markdown}
