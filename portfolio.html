@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Aaqib Bhat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    .page-header {
+      text-align: center;
+      padding: 4rem 1.5rem 2rem;
+    }
+    .page-title {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+    .page-subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .portfolio-grid {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    .project-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      border: 1px solid var(--border-light);
+    }
+    
+    @media (min-width: 992px) {
+      .project-card {
+        grid-template-columns: 1fr 1.2fr;
+      }
+    }
+    
+    .project-info h2 {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+    
+    .project-client {
+      font-size: 0.95rem;
+      color: var(--accent-blue);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      background: var(--bg-blue-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+    }
+    
+    .project-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .result-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .result-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--bg-green-light);
+      color: var(--color-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .result-text {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      grid-template-areas: 
+        "main main"
+        "sub1 sub2";
+    }
+    
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .gallery-main {
+      grid-area: main;
+      height: 280px;
+    }
+    
+    .gallery-sub {
+      height: 160px;
+    }
+    
+    .gallery-label {
+      background: var(--text-main);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .img-wrapper {
+      position: relative;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="bg-mesh">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Aaqib<span class="logo-accent">Bhat</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#services">Services</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn-hire">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1 class="page-title">Case Studies & Work</h1>
+    <p class="page-subtitle">A deep dive into real projects, real metrics, and the strategies used to achieve page 1 rankings and scalable organic growth.</p>
+  </header>
+
+  <main class="portfolio-grid">
+    
+    <!-- PROJECT 1 -->
+    <article class="project-card">
+      <div class="project-info">
+        <span class="project-client">Thrill Top Journeys</span>
+        <h2>Kashmir Travel Agency Growth</h2>
+        
+        <div class="tag-section mb-4">
+          <div class="tags-group">
+            <span class="tag bg-blue-light">Technical SEO</span>
+            <span class="tag bg-blue-light">On-Page</span>
+            <span class="tag bg-orange-light">Content Strategy</span>
+          </div>
+        </div>
+        
+        <p class="project-desc">
+          Led end-to-end SEO strategy for a highly competitive travel agency in Kashmir. Targeted high-intent service keywords with a mix of technical fixes, content improvements, and a complete internal linking restructure.
+        </p>
+        
+        <div class="results-list">
+          <div class="result-item">
+            <div class="result-icon"><i data-feather="trending-up" class="icon-sm"></i></div>
+            <div class="result-text">Organic traffic growth by 500% over 6 months</div>
+          </div>
+          <div class="result-item">
+            <div class="result-icon"><i data-feather="check" class="icon-sm"></i></div>
+            <div class="result-text">Multiple high-intent service keywords ranked on Page 1</div>
+          </div>
+          <div class="result-item">
+            <div class="result-icon"><i data-feather="tool" class="icon-sm"></i></div>
+            <div class="result-text">Technical SEO audit resolved 40+ critical indexing errors</div>
+          </div>
+        </div>
+        
+        <a href="index.html#contact" class="btn-yellow">
+          Discuss a Similar Project <i data-feather="arrow-right" class="icon-sm"></i>
+        </a>
+      </div>
+      
+      <div class="project-gallery">
+        <div class="gallery-grid">
+          <!-- Website Mockup -->
+          <div class="gallery-item gallery-main">
+            <div class="img-wrapper">
+              <span class="gallery-label">Website UI</span>
+              <img src="assets/projects/mockup_travel.png" alt="Thrill Top Journeys Website">
+            </div>
+          </div>
+          <!-- GSC Screenshot -->
+          <div class="gallery-item gallery-sub">
+            <div class="img-wrapper">
+              <span class="gallery-label">GSC Growth</span>
+              <img src="assets/projects/thillopgsc.png" alt="GSC Impressions">
+            </div>
+          </div>
+          <!-- Semrush Screenshot -->
+          <div class="gallery-item gallery-sub">
+            <div class="img-wrapper">
+              <span class="gallery-label">Semrush Analytics</span>
+              <img src="assets/projects/mockup_semrush.png" alt="Semrush Dashboard">
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2 -->
+    <article class="project-card">
+      <div class="project-info">
+        <span class="project-client">Hola Keto</span>
+        <h2>E-Commerce Niche Dominance</h2>
+        
+        <div class="tag-section mb-4">
+          <div class="tags-group">
+            <span class="tag bg-green-light">E-commerce SEO</span>
+            <span class="tag bg-purple-light">Keyword Research</span>
+            <span class="tag bg-orange-light">Content Optimization</span>
+          </div>
+        </div>
+        
+        <p class="project-desc">
+          Worked on organic search visibility for a niche keto e-commerce brand. Focused heavily on buyer-intent keyword targeting, product page optimization, and creating blog content clusters that drive purchasing decisions.
+        </p>
+        
+        <div class="results-list">
+          <div class="result-item">
+            <div class="result-icon"><i data-feather="target" class="icon-sm"></i></div>
+            <div class="result-text">Buyer-intent keyword mapping completed for all categories</div>
+          </div>
+          <div class="result-item">
+            <div class="result-icon"><i data-feather="eye" class="icon-sm"></i></div>
+            <div class="result-text">Organic impressions improved by 200% rapidly</div>
+          </div>
+          <div class="result-item">
+            <div class="result-icon"><i data-feather="mouse-pointer" class="icon-sm"></i></div>
+            <div class="result-text">CTR drastically improved through optimized title/meta strategy</div>
+          </div>
+        </div>
+        
+        <a href="index.html#contact" class="btn-yellow">
+          Discuss a Similar Project <i data-feather="arrow-right" class="icon-sm"></i>
+        </a>
+      </div>
+      
+      <div class="project-gallery">
+        <div class="gallery-grid">
+          <!-- Website Mockup -->
+          <div class="gallery-item gallery-main">
+            <div class="img-wrapper">
+              <span class="gallery-label">E-Commerce Store</span>
+              <img src="assets/projects/mockup_keto.png" alt="Hola Keto Website">
+            </div>
+          </div>
+          <!-- GSC Screenshot -->
+          <div class="gallery-item gallery-sub">
+            <div class="img-wrapper">
+              <span class="gallery-label">GSC Insights</span>
+              <img src="assets/projects/insightslast6months.png" alt="GSC Impressions">
+            </div>
+          </div>
+          <!-- Semrush Screenshot -->
+          <div class="gallery-item gallery-sub">
+            <div class="img-wrapper">
+              <span class="gallery-label">Rankings</span>
+              <img src="assets/projects/mockup_semrush.png" alt="Ahrefs Rankings">
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="footer mt-4">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-copy">
+      © 2026 Aaqib Bhat. All rights reserved.<br>
+      SEO Specialist & Growth Consultant.
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
