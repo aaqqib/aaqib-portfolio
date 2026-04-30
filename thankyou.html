@@ -1,298 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Message Received — Aaqib Bhat</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .ty-page {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      padding: 2rem;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Received — Aaqib Bhat</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .ty-page {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 2rem;
+      }
 
-    /* reuse hero grid bg */
-    .ty-page::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-      pointer-events: none;
-    }
+      /* reuse hero grid bg */
+      .ty-page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(
+          ellipse 80% 80% at 50% 50%,
+          black 40%,
+          transparent 100%
+        );
+        pointer-events: none;
+      }
 
-    /* glow blob */
-    .ty-page::after {
-      content: '';
-      position: absolute;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(200,241,53,0.09) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
+      /* glow blob */
+      .ty-page::after {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(200, 241, 53, 0.09) 0%,
+          transparent 70%
+        );
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
 
-    .ty-card {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 600px;
-      width: 100%;
-      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
-    }
+      .ty-card {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(32px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    .ty-icon {
-      width: 80px; height: 80px;
-      background: rgba(200,241,53,0.08);
-      border: 1px solid rgba(200,241,53,0.25);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 2rem;
-      font-size: 2rem;
-      animation: popIn 0.6s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-    }
+      .ty-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(200, 241, 53, 0.08);
+        border: 1px solid rgba(200, 241, 53, 0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        font-size: 2rem;
+        animation: popIn 0.6s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
 
-    @keyframes popIn {
-      from { transform: scale(0.5); opacity: 0; }
-      to   { transform: scale(1);   opacity: 1; }
-    }
+      @keyframes popIn {
+        from {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
 
-    .ty-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(200,241,53,0.07);
-      border: 1px solid rgba(200,241,53,0.2);
-      border-radius: 100px;
-      padding: 0.35rem 1rem;
-      margin-bottom: 1.75rem;
-    }
+      .ty-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: rgba(200, 241, 53, 0.07);
+        border: 1px solid rgba(200, 241, 53, 0.2);
+        border-radius: 100px;
+        padding: 0.35rem 1rem;
+        margin-bottom: 1.75rem;
+      }
 
-    .ty-title {
-      font-family: var(--font-head);
-      font-weight: 800;
-      font-size: clamp(2.4rem, 6vw, 3.8rem);
-      letter-spacing: -0.03em;
-      line-height: 1.05;
-      margin-bottom: 1.5rem;
-    }
+      .ty-title {
+        font-family: var(--font-head);
+        font-weight: 800;
+        font-size: clamp(2.4rem, 6vw, 3.8rem);
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        margin-bottom: 1.5rem;
+      }
 
-    .ty-title em {
-      font-style: italic;
-      color: var(--accent);
-    }
+      .ty-title em {
+        font-style: italic;
+        color: var(--accent);
+      }
 
-    .ty-body {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      font-weight: 300;
-      margin-bottom: 0.85rem;
-    }
+      .ty-body {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        font-weight: 300;
+        margin-bottom: 0.85rem;
+      }
 
-    .ty-body strong {
-      color: var(--text);
-      font-weight: 500;
-    }
+      .ty-body strong {
+        color: var(--text);
+        font-weight: 500;
+      }
 
-    .ty-divider {
-      width: 40px;
-      height: 1px;
-      background: var(--border);
-      margin: 2rem auto;
-    }
+      .ty-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--border);
+        margin: 2rem auto;
+      }
 
-    .ty-what-next {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem 2rem;
-      text-align: left;
-      margin-bottom: 2.5rem;
-    }
+      .ty-what-next {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem 2rem;
+        text-align: left;
+        margin-bottom: 2.5rem;
+      }
 
-    .ty-what-next-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 1rem;
-    }
+      .ty-what-next-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        margin-bottom: 1rem;
+      }
 
-    .ty-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+      .ty-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
 
-    .ty-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+      .ty-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
 
-    .ty-step-num {
-      font-family: var(--font-head);
-      font-weight: 700;
-      font-size: 0.75rem;
-      color: var(--accent);
-      background: rgba(200,241,53,0.08);
-      border: 1px solid rgba(200,241,53,0.2);
-      border-radius: 50%;
-      width: 24px; height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
+      .ty-step-num {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: var(--accent);
+        background: rgba(200, 241, 53, 0.08);
+        border: 1px solid rgba(200, 241, 53, 0.2);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
 
-    .ty-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+      .ty-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-    .ty-countdown {
-      margin-top: 2rem;
-      font-size: 0.78rem;
-      color: var(--text-dim);
-      letter-spacing: 0.04em;
-    }
+      .ty-countdown {
+        margin-top: 2rem;
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        letter-spacing: 0.04em;
+      }
 
-    .ty-countdown span {
-      color: var(--accent);
-      font-weight: 700;
-      font-family: var(--font-head);
-    }
+      .ty-countdown span {
+        color: var(--accent);
+        font-weight: 700;
+        font-family: var(--font-head);
+      }
 
-    /* nav minimal on this page */
-    .nav-ty {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 68px;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      padding: 0 5%;
-    }
+      /* nav minimal on this page */
+      .nav-ty {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 68px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+      }
 
-    .nav-ty-logo {
-      font-family: var(--font-head);
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
+      .nav-ty-logo {
+        font-family: var(--font-head);
+        font-weight: 800;
+        font-size: 1.3rem;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-ty">
+      <a href="index.html" class="nav-ty-logo"
+        >Aaqib Bhat<span class="dot">.</span></a
+      >
+    </nav>
 
-  <nav class="nav-ty">
-    <a href="index.html" class="nav-ty-logo">Aaqib Bhat<span class="dot">.</span></a>
-  </nav>
+    <div class="ty-page">
+      <div class="ty-card">
+        <div class="ty-icon">📬</div>
 
-  <div class="ty-page">
-    <div class="ty-card">
+        <div class="ty-badge"><span>✓</span> Message delivered</div>
 
-      <div class="ty-icon">📬</div>
+        <h1 class="ty-title">Your message<br />landed <em>safely.</em></h1>
 
-      <div class="ty-badge">
-        <span>✓</span> Message delivered
-      </div>
+        <p class="ty-body">
+          No black holes. No spam folders. No pigeons lost mid-flight.<br />
+          <strong>Your message is officially in my inbox.</strong>
+        </p>
 
-      <h1 class="ty-title">
-        Your message<br>landed <em>safely.</em>
-      </h1>
+        <p class="ty-body">
+          I read every message personally — usually within 24 hours, sometimes
+          faster if the coffee is strong enough.
+        </p>
 
-      <p class="ty-body">
-        No black holes. No spam folders. No pigeons lost mid-flight.<br>
-        <strong>Your message is officially in my inbox.</strong>
-      </p>
+        <div class="ty-divider"></div>
 
-      <p class="ty-body">
-        I read every message personally — usually within 24 hours,
-        sometimes faster if the coffee is strong enough.
-      </p>
-
-      <div class="ty-divider"></div>
-
-      <div class="ty-what-next">
-        <div class="ty-what-next-label">While you wait — here's what happens next</div>
-        <div class="ty-steps">
-          <div class="ty-step">
-            <div class="ty-step-num">1</div>
-            <span>I read your message, take a sip of chai, and think about your website's potential.</span>
+        <div class="ty-what-next">
+          <div class="ty-what-next-label">
+            While you wait — here's what happens next
           </div>
-          <div class="ty-step">
-            <div class="ty-step-num">2</div>
-            <span>I do a quick look at your site — old habits die hard.</span>
-          </div>
-          <div class="ty-step">
-            <div class="ty-step-num">3</div>
-            <span>I reply with a clear, no-fluff response. No templated "per my last email" energy here.</span>
+          <div class="ty-steps">
+            <div class="ty-step">
+              <div class="ty-step-num">1</div>
+              <span
+                >I read your message, take a sip of chai, and think about your
+                website's potential.</span
+              >
+            </div>
+            <div class="ty-step">
+              <div class="ty-step-num">2</div>
+              <span>I do a quick look at your site — old habits die hard.</span>
+            </div>
+            <div class="ty-step">
+              <div class="ty-step-num">3</div>
+              <span
+                >I reply with a clear, no-fluff response. No templated "per my
+                last email" energy here.</span
+              >
+            </div>
           </div>
         </div>
+
+        <div class="ty-actions">
+          <a href="index.html" class="btn-primary">← Back to Portfolio</a>
+          <a
+            href="https://www.linkedin.com/in/aaqibbhat/"
+            target="_blank"
+            rel="noopener"
+            class="btn-ghost"
+            >Connect on LinkedIn</a
+          >
+        </div>
+
+        <p class="ty-countdown" id="countdown">
+          Auto-redirecting in <span id="timer">10</span> seconds
+        </p>
       </div>
-
-      <div class="ty-actions">
-        <a href="index.html" class="btn-primary">← Back to Portfolio</a>
-        <a href="https://www.linkedin.com/in/aaqibbhat/" target="_blank" rel="noopener" class="btn-ghost">Connect on LinkedIn</a>
-      </div>
-
-      <p class="ty-countdown" id="countdown">
-        Auto-redirecting in <span id="timer">10</span> seconds
-      </p>
-
     </div>
-  </div>
 
-  <script>
-    // countdown redirect
-    let seconds = 15;
-    const timerEl = document.getElementById('timer');
-    const countdownEl = document.getElementById('countdown');
+    <script>
+      // countdown redirect
+      let seconds = 15;
+      const timerEl = document.getElementById("timer");
+      const countdownEl = document.getElementById("countdown");
 
-    const interval = setInterval(() => {
-      seconds--;
-      timerEl.textContent = seconds;
-      if (seconds <= 0) {
-        clearInterval(interval);
-        countdownEl.textContent = 'Redirecting…';
-        window.location.href = 'index.html';
-      }
-    }, 1000);
-  </script>
-
-</body>
+      const interval = setInterval(() => {
+        seconds--;
+        timerEl.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          countdownEl.textContent = "Redirecting…";
+          window.location.href = "index.html";
+        }
+      }, 1000);
+    </script>
+  </body>
 </html>

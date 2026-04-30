@@ -22,6 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../blog.css" />
+  <script src="../theme.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 
   <!-- Article schema markup -->
   <script type="application/ld+json">
@@ -52,44 +54,80 @@
 </script>
 <body>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-logo">Aaqib Bhat<span class="dot">.</span></a>
-      <ul class="nav-links">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#services">Services</a></li>
-        <li><a href="../index.html#work">Work</a></li>
-        <li><a href="../blog.html" style="color:var(--text)">Blog</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="../assets/resume.pdf" download class="btn-cv">Download CV</a>
-        <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+  <div class="app-layout">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
       </div>
-    </div>
-  </nav>
 
-  <!-- ARTICLE HERO -->
-  <header class="article-hero">
-    <div class="container">
-      <a href="../blog.html" class="article-back">← Back to Blog</a>
-      <div class="article-meta">
-        <span class="blog-tag">Travel SEO</span>
-        <span class="article-read-time">8 min read · March 2026</span>
+      <div class="nav-section">
+        <a href="../index.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="home"></i> Home</div>
+          <div class="nav-shortcut">1</div>
+        </a>
+        <a href="../about.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="user"></i> About</div>
+          <div class="nav-shortcut">2</div>
+        </a>
+        <a href="../portfolio.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="code"></i> Projects</div>
+          <div class="nav-shortcut">3</div>
+        </a>
       </div>
-      <h1 class="article-title">SEO for Travel Agencies in Kashmir: The Complete 2026 Guide</h1>
-      <p class="article-intro">Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500% in 6 months.</p>
-    </div>
-  </header>
 
-  <!-- ARTICLE BODY -->
-  <main class="article-body">
-    <div class="container">
-      <div class="article-content">
+      <div class="nav-section">
+        <div class="nav-label">Resources</div>
+        <a href="../blog.html" class="nav-item active">
+          <div class="nav-item-left"><i data-feather="edit-2"></i> Writing</div>
+          <div class="nav-shortcut">4</div>
+        </a>
+        <a href="#" class="nav-item">
+          <div class="nav-item-left"><i data-feather="bookmark"></i> Reading List</div>
+          <div class="nav-shortcut">5</div>
+        </a>
+        <a href="../tools.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
+          <div class="nav-shortcut">6</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Connect</div>
+        <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
+          <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
+          <div class="nav-shortcut">7</div>
+        </a>
+        <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="nav-item">
+          <div class="nav-item-left"><i data-feather="linkedin"></i> LinkedIn</div>
+          <i data-feather="arrow-up-right" style="width:14px; color:var(--text-light)"></i>
+        </a>
+      </div>
+
+      <div class="theme-switcher">
+        <div class="theme-btn">Light</div>
+        <div class="theme-btn active">Dark</div>
+        <div class="theme-btn">Auto</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- ARTICLE HERO -->
+        <header class="article-hero" style="padding-top:0;">
+          <a href="../blog.html" class="article-back" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;color:var(--text-muted);"><i data-feather="arrow-left" style="width:16px;height:16px;"></i> Back to Writing</a>
+          <div class="article-meta" style="margin-bottom: 1rem;">
+            <span class="blog-tag">Travel SEO</span>
+            <span class="article-read-time" style="color:var(--text-light); font-size:0.85rem; margin-left:1rem;">8 min read · March 2026</span>
+          </div>
+          <h1 class="hero-title" style="margin-bottom: 1rem;">SEO for Travel Agencies in Kashmir: The Complete 2026 Guide</h1>
+          <p class="article-intro" style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 3rem;">Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500% in 6 months.</p>
+        </header>
+
+        <div class="article-content">
 
         <h2>Why Most Kashmir Travel Agencies Don't Show Up on Google</h2>
         <p>Kashmir receives millions of tourists every year. People searching for "Kashmir honeymoon packages", "Gulmarg ski resort tours", or "Dal Lake houseboat booking" are ready to spend money. Yet when you search these terms, most local agencies don't appear anywhere on Page 1.</p>
@@ -195,18 +233,28 @@
         </div>
 
       </div>
-    </div>
-  </main>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">Aaqib Bhat<span class="dot">.</span></span>
-      <span class="footer-copy">© 2026 Aaqib Bhat · SEO Specialist</span>
-      <a href="../blog.html" class="footer-back">← Back to Blog</a>
-    </div>
-  </footer>
+      </div>
+    </main>
 
-  <script src="../script.js"></script>
+  </div>
+
+  <!-- MOBILE NAVIGATION -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="../index.html" class="mobile-nav-item"><i data-feather="home"></i></a>
+      <a href="../about.html" class="mobile-nav-item"><i data-feather="user"></i></a>
+      <a href="../portfolio.html" class="mobile-nav-item"><i data-feather="code"></i></a>
+      <a href="#" class="mobile-nav-item"><i data-feather="heart"></i></a>
+      <a href="../blog.html" class="mobile-nav-item active"><i data-feather="edit-2"></i></a>
+      <a href="#" class="mobile-nav-item"><i data-feather="bookmark"></i></a>
+      <a href="../tools.html" class="mobile-nav-item"><i data-feather="tool"></i></a>
+    </div>
+  </nav>
+
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>

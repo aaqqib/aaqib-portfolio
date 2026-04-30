@@ -1,226 +1,374 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tools | Aaqib Bhat</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="theme.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-</head>
-<body>
-  
-  <div class="app-layout">
-    
-    <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar">
-      <div class="logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      </div>
-
-      <div class="nav-section">
-        <a href="index.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="home"></i> Home</div>
-          <div class="nav-shortcut">1</div>
-        </a>
-        <a href="about.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="user"></i> About</div>
-          <div class="nav-shortcut">2</div>
-        </a>
-        <a href="portfolio.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="code"></i> Projects</div>
-          <div class="nav-shortcut">3</div>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label">Resources</div>
-        <a href="#" class="nav-item">
-          <div class="nav-item-left"><i data-feather="edit-2"></i> Writing</div>
-          <div class="nav-shortcut">4</div>
-        </a>
-        <a href="#" class="nav-item">
-          <div class="nav-item-left"><i data-feather="bookmark"></i> Reading List</div>
-          <div class="nav-shortcut">5</div>
-        </a>
-        <a href="tools.html" class="nav-item active">
-          <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
-          <div class="nav-shortcut">6</div>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label">Connect</div>
-        <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
-          <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
-          <div class="nav-shortcut">7</div>
-        </a>
-        <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="nav-item">
-          <div class="nav-item-left"><i data-feather="linkedin"></i> LinkedIn</div>
-          <i data-feather="arrow-up-right" style="width:14px; color:var(--text-light)"></i>
-        </a>
-      </div>
-
-      <div class="theme-switcher">
-        <div class="theme-btn active">Light</div>
-        <div class="theme-btn">Dark</div>
-        <div class="theme-btn">Auto</div>
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <div class="content-wrapper">
-        
-        <h1 class="hero-title" style="margin-bottom: 1rem;">Tools</h1>
-        <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 3rem;">
-          A curated and growing list of SEO, design and development resources I use regularly and find useful.
-        </p>
-
-        <div class="tools-nav">
-          <div class="tool-tab active" data-filter="all">Recently Added</div>
-          <div class="tool-tab" data-filter="general">General</div>
-          <div class="tool-tab" data-filter="seo">SEO</div>
-          <div class="tool-tab" data-filter="design">Design</div>
-          <div class="tool-tab" data-filter="development">Development</div>
-          <div class="tool-tab" data-filter="productivity">Productivity</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools | Aaqib Bhat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- SIDEBAR NAVIGATION -->
+      <aside class="sidebar">
+        <div class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
         </div>
 
-        <div class="tools-list">
-          
-          <!-- SEO Tools -->
-          <div class="tool-row" data-category="seo">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/ahrefs/E95D2C" alt="Ahrefs"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Ahrefs <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">The ultimate all-in-one SEO toolset. I use it primarily for deep backlink analysis, competitor research, and tracking keyword visibility across major clients.</div>
+        <div class="nav-section">
+          <a href="index.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="home"></i> Home</div>
+            <div class="nav-shortcut">1</div>
+          </a>
+          <a href="about.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="user"></i> About</div>
+            <div class="nav-shortcut">2</div>
+          </a>
+          <a href="portfolio.html" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="code"></i> Projects
             </div>
-          </div>
-
-          <div class="tool-row" data-category="seo">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/semrush/FF622D" alt="Semrush"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Semrush <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">My go-to for comprehensive site audits, domain authority checks, and discovering highly profitable 'striking distance' keywords.</div>
-            </div>
-          </div>
-
-          <div class="tool-row" data-category="seo">
-            <div class="tool-row-icon"><img src="https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/images/frog-logo.svg" alt="Screaming Frog"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Screaming Frog SEO Spider <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">The industry-standard crawler. Indispensable for identifying broken links, analyzing page titles & meta data, and discovering deep technical SEO issues.</div>
-            </div>
-          </div>
-
-          <!-- General -->
-          <div class="tool-row" data-category="general">
-            <div class="tool-row-icon" style="background:#0a0a0a; border: 1px solid var(--border)"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="GA4"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Google Analytics 4 <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">The absolute source of truth for measuring traffic and events. Critical for setting up custom conversions and understanding user journeys.</div>
-            </div>
-          </div>
-
-          <div class="tool-row" data-category="general">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/googlesearchconsole/4285F4" alt="GSC"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Google Search Console <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">Direct insight into how Google views your site. Essential for checking index coverage and actual query performance.</div>
-            </div>
-          </div>
-
-          <!-- Design -->
-          <div class="tool-row" data-category="design">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Figma <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">The collaborative interface design tool. I use it for wireframing new page templates before they go into development to ensure SEO constraints are met.</div>
-            </div>
-          </div>
-
-          <!-- Development -->
-          <div class="tool-row" data-category="development">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">VS Code <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">My preferred lightweight code editor. Perfect for making quick HTML/CSS adjustments to client sites or editing structured data schemas.</div>
-            </div>
-          </div>
-
-          <div class="tool-row" data-category="development">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">GitHub <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">Version control platform. Essential for tracking code changes when collaborating with developer teams on technical SEO implementations.</div>
-            </div>
-          </div>
-
-          <!-- Productivity -->
-          <div class="tool-row" data-category="productivity">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/notion/000000" alt="Notion"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Notion <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">The all-in-one workspace. I manage my entire content calendar, keyword research databases, and client deliverables here.</div>
-            </div>
-          </div>
-
-          <div class="tool-row" data-category="productivity">
-            <div class="tool-row-icon"><img src="https://cdn.simpleicons.org/slack/4A154B" alt="Slack"></div>
-            <div class="tool-row-content">
-              <div class="tool-row-title">Slack <i data-feather="arrow-up-right"></i></div>
-              <div class="tool-row-desc">The standard for async communication. Vital for staying connected with remote clients and digital marketing teams.</div>
-            </div>
-          </div>
-
+            <div class="nav-shortcut">3</div>
+          </a>
         </div>
 
-      </div>
-    </main>
+        <div class="nav-section">
+          <div class="nav-label">Resources</div>
+          <a href="blog.html" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="edit-2"></i> Writing
+            </div>
+            <div class="nav-shortcut">4</div>
+          </a>
+          <a href="#" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="bookmark"></i> Reading List
+            </div>
+            <div class="nav-shortcut">5</div>
+          </a>
+          <a href="tools.html" class="nav-item active">
+            <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
+            <div class="nav-shortcut">6</div>
+          </a>
+        </div>
 
-  </div>
+        <div class="nav-section">
+          <div class="nav-label">Connect</div>
+          <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
+            <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
+            <div class="nav-shortcut">7</div>
+          </a>
+          <a
+            href="https://linkedin.com/in/aaqibbhat"
+            target="_blank"
+            class="nav-item"
+          >
+            <div class="nav-item-left">
+              <i data-feather="linkedin"></i> LinkedIn
+            </div>
+            <i
+              data-feather="arrow-up-right"
+              style="width: 14px; color: var(--text-light)"
+            ></i>
+          </a>
+        </div>
 
-  <!-- MOBILE NAVIGATION -->
-  <nav class="mobile-nav">
-    <div class="mobile-nav-inner">
-      <a href="index.html" class="mobile-nav-item"><i data-feather="home"></i></a>
-      <a href="about.html" class="mobile-nav-item"><i data-feather="user"></i></a>
-      <a href="portfolio.html" class="mobile-nav-item"><i data-feather="code"></i></a>
-      <a href="#" class="mobile-nav-item"><i data-feather="heart"></i></a>
-      <a href="#" class="mobile-nav-item"><i data-feather="edit-2"></i></a>
-      <a href="#" class="mobile-nav-item"><i data-feather="bookmark"></i></a>
-      <a href="tools.html" class="mobile-nav-item active"><i data-feather="tool"></i></a>
+        <div class="theme-switcher">
+          <div class="theme-btn active">Light</div>
+          <div class="theme-btn">Dark</div>
+          <div class="theme-btn">Auto</div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <div class="content-wrapper">
+          <h1 class="hero-title" style="margin-bottom: 1rem">Tools</h1>
+          <p
+            style="
+              font-size: 1.05rem;
+              color: var(--text-muted);
+              margin-bottom: 3rem;
+            "
+          >
+            A curated and growing list of SEO, design and development resources
+            I use regularly and find useful.
+          </p>
+
+          <div class="tools-nav">
+            <div class="tool-tab active" data-filter="all">Recently Added</div>
+            <div class="tool-tab" data-filter="general">General</div>
+            <div class="tool-tab" data-filter="seo">SEO</div>
+            <div class="tool-tab" data-filter="design">Design</div>
+            <div class="tool-tab" data-filter="development">Development</div>
+            <div class="tool-tab" data-filter="productivity">Productivity</div>
+          </div>
+
+          <div class="tools-list">
+            <!-- SEO Tools -->
+            <div class="tool-row" data-category="seo">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/ahrefs/E95D2C"
+                  alt="Ahrefs"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Ahrefs <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  The ultimate all-in-one SEO toolset. I use it primarily for
+                  deep backlink analysis, competitor research, and tracking
+                  keyword visibility across major clients.
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-row" data-category="seo">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/semrush/FF622D"
+                  alt="Semrush"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Semrush <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  My go-to for comprehensive site audits, domain authority
+                  checks, and discovering highly profitable 'striking distance'
+                  keywords.
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-row" data-category="seo">
+              <div class="tool-row-icon">
+                <img
+                  src="https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/images/frog-logo.svg"
+                  alt="Screaming Frog"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Screaming Frog SEO Spider
+                  <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  The industry-standard crawler. Indispensable for identifying
+                  broken links, analyzing page titles & meta data, and
+                  discovering deep technical SEO issues.
+                </div>
+              </div>
+            </div>
+
+            <!-- General -->
+            <div class="tool-row" data-category="general">
+              <div
+                class="tool-row-icon"
+                style="background: #0a0a0a; border: 1px solid var(--border)"
+              >
+                <img
+                  src="https://cdn.simpleicons.org/googleanalytics/E37400"
+                  alt="GA4"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Google Analytics 4 <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  The absolute source of truth for measuring traffic and events.
+                  Critical for setting up custom conversions and understanding
+                  user journeys.
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-row" data-category="general">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/googlesearchconsole/4285F4"
+                  alt="GSC"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Google Search Console <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  Direct insight into how Google views your site. Essential for
+                  checking index coverage and actual query performance.
+                </div>
+              </div>
+            </div>
+
+            <!-- Design -->
+            <div class="tool-row" data-category="design">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/figma/F24E1E"
+                  alt="Figma"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Figma <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  The collaborative interface design tool. I use it for
+                  wireframing new page templates before they go into development
+                  to ensure SEO constraints are met.
+                </div>
+              </div>
+            </div>
+
+            <!-- Development -->
+            <div class="tool-row" data-category="development">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/visualstudiocode/007ACC"
+                  alt="VS Code"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  VS Code <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  My preferred lightweight code editor. Perfect for making quick
+                  HTML/CSS adjustments to client sites or editing structured
+                  data schemas.
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-row" data-category="development">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/github/181717"
+                  alt="GitHub"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  GitHub <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  Version control platform. Essential for tracking code changes
+                  when collaborating with developer teams on technical SEO
+                  implementations.
+                </div>
+              </div>
+            </div>
+
+            <!-- Productivity -->
+            <div class="tool-row" data-category="productivity">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/notion/000000"
+                  alt="Notion"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Notion <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  The all-in-one workspace. I manage my entire content calendar,
+                  keyword research databases, and client deliverables here.
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-row" data-category="productivity">
+              <div class="tool-row-icon">
+                <img
+                  src="https://cdn.simpleicons.org/slack/4A154B"
+                  alt="Slack"
+                />
+              </div>
+              <div class="tool-row-content">
+                <div class="tool-row-title">
+                  Slack <i data-feather="arrow-up-right"></i>
+                </div>
+                <div class="tool-row-desc">
+                  The standard for async communication. Vital for staying
+                  connected with remote clients and digital marketing teams.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-  </nav>
 
-  <script>
-    feather.replace();
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="index.html" class="mobile-nav-item"
+          ><i data-feather="home"></i
+        ></a>
+        <a href="about.html" class="mobile-nav-item"
+          ><i data-feather="user"></i
+        ></a>
+        <a href="portfolio.html" class="mobile-nav-item"
+          ><i data-feather="code"></i
+        ></a>
+        <a href="#" class="mobile-nav-item"><i data-feather="heart"></i></a>
+        <a href="blog.html" class="mobile-nav-item"
+          ><i data-feather="edit-2"></i
+        ></a>
+        <a href="#" class="mobile-nav-item"><i data-feather="bookmark"></i></a>
+        <a href="tools.html" class="mobile-nav-item active"
+          ><i data-feather="tool"></i
+        ></a>
+      </div>
+    </nav>
 
-    // Tools filtering logic
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.tool-tab');
-      const tools = document.querySelectorAll('.tool-row');
+    <script>
+      feather.replace();
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          // Remove active class from all tabs
-          tabs.forEach(t => t.classList.remove('active'));
-          // Add active class to clicked tab
-          tab.classList.add('active');
+      // Tools filtering logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tool-tab");
+        const tools = document.querySelectorAll(".tool-row");
 
-          const filter = tab.getAttribute('data-filter');
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            // Remove active class from all tabs
+            tabs.forEach((t) => t.classList.remove("active"));
+            // Add active class to clicked tab
+            tab.classList.add("active");
 
-          // Filter tools
-          tools.forEach(tool => {
-            if (filter === 'all' || tool.getAttribute('data-category') === filter) {
-              tool.style.display = 'flex';
-            } else {
-              tool.style.display = 'none';
-            }
+            const filter = tab.getAttribute("data-filter");
+
+            // Filter tools
+            tools.forEach((tool) => {
+              if (
+                filter === "all" ||
+                tool.getAttribute("data-category") === filter
+              ) {
+                tool.style.display = "flex";
+              } else {
+                tool.style.display = "none";
+              }
+            });
           });
         });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

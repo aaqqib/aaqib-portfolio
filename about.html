@@ -1,142 +1,862 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Aaqib Bhat</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="theme.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-</head>
-<body>
-  
-  <div class="app-layout">
-    
-    <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar">
-      <div class="logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      </div>
-
-      <div class="nav-section">
-        <a href="index.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="home"></i> Home</div>
-          <div class="nav-shortcut">1</div>
-        </a>
-        <a href="about.html" class="nav-item active">
-          <div class="nav-item-left"><i data-feather="user"></i> About</div>
-          <div class="nav-shortcut">2</div>
-        </a>
-        <a href="portfolio.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="code"></i> Projects</div>
-          <div class="nav-shortcut">3</div>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label">Resources</div>
-        <a href="#" class="nav-item">
-          <div class="nav-item-left"><i data-feather="edit-2"></i> Writing</div>
-          <div class="nav-shortcut">4</div>
-        </a>
-        <a href="#" class="nav-item">
-          <div class="nav-item-left"><i data-feather="bookmark"></i> Reading List</div>
-          <div class="nav-shortcut">5</div>
-        </a>
-        <a href="tools.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
-          <div class="nav-shortcut">6</div>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label">Connect</div>
-        <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
-          <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
-          <div class="nav-shortcut">7</div>
-        </a>
-        <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="nav-item">
-          <div class="nav-item-left"><i data-feather="linkedin"></i> LinkedIn</div>
-          <i data-feather="arrow-up-right" style="width:14px; color:var(--text-light)"></i>
-        </a>
-      </div>
-
-      <div class="theme-switcher">
-        <div class="theme-btn">Light</div>
-        <div class="theme-btn active">Dark</div>
-        <div class="theme-btn">Auto</div>
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <div class="content-wrapper">
-        
-        <h1 class="hero-title" style="margin-bottom: 2rem;">About</h1>
-        
-        <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 4rem;">
-          I'm Aaqib Bhat, an SEO Specialist and Performance Marketer currently based in Srinagar, J&K. I've spent the last few years helping businesses build organic search engines that drive scalable traffic and, more importantly, real revenue. My work spans deep technical audits, semantic keyword mapping, and full-funnel content strategy.
-        </p>
-
-        <h2 class="section-title">Career</h2>
-        <div class="timeline-list" style="margin-bottom: 4rem;">
-          
-          <div class="timeline-item">
-            <div class="timeline-icon"><i data-feather="briefcase"></i></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <span class="timeline-title">SEO Executive <span style="color:var(--text-light); font-weight:400; font-size:0.9rem">at Digital Agency</span></span>
-                <span class="timeline-date">Oct 2025 — Present</span>
-              </div>
-              <p class="timeline-desc">Managing a portfolio of high-value client accounts. Responsible for technical audits, comprehensive keyword mapping, and on-page optimization.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon"><i data-feather="globe"></i></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <span class="timeline-title">Freelance SEO Specialist</span>
-                <span class="timeline-date">Jan 2025 — Present</span>
-              </div>
-              <p class="timeline-desc">Partnering directly with founders. Worked extensively with e-commerce brands to optimize product pages for buyer-intent keywords.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon"><i data-feather="activity"></i></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <span class="timeline-title">SEO Analyst</span>
-                <span class="timeline-date">2023 — 2024</span>
-              </div>
-              <p class="timeline-desc">Focused heavily on content gap analysis and link building. Built scalable outreach campaigns that acquired high-authority placements.</p>
-            </div>
-          </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Aaqib Bhat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- SIDEBAR NAVIGATION -->
+      <aside class="sidebar">
+        <div class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
         </div>
 
-        <h2 class="section-title">Tech stack</h2>
-        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size:0.95rem;">Over the years, I've built a robust toolkit for audits, tracking, and execution.</p>
-        
-        <div class="tool-grid">
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/ahrefs/9ca3af" alt="Ahrefs"> Ahrefs</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/semrush/9ca3af" alt="Semrush"> Semrush</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/googleanalytics/9ca3af" alt="GA4"> GA4</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/googlesearchconsole/9ca3af" alt="GSC"> GSC</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/googletagmanager/9ca3af" alt="GTM"> GTM</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/wordpress/9ca3af" alt="WordPress"> WordPress</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/shopify/9ca3af" alt="Shopify"> Shopify</div>
-          <div class="tool-pill"><img src="https://cdn.simpleicons.org/webflow/9ca3af" alt="Webflow"> Webflow</div>
+        <div class="nav-section">
+          <a href="index.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="home"></i> Home</div>
+            <div class="nav-shortcut">1</div>
+          </a>
+          <a href="about.html" class="nav-item active">
+            <div class="nav-item-left"><i data-feather="user"></i> About</div>
+            <div class="nav-shortcut">2</div>
+          </a>
+          <a href="portfolio.html" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="code"></i> Projects
+            </div>
+            <div class="nav-shortcut">3</div>
+          </a>
         </div>
 
+        <div class="nav-section">
+          <div class="nav-label">Resources</div>
+          <a href="blog.html" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="edit-2"></i> Writing
+            </div>
+            <div class="nav-shortcut">4</div>
+          </a>
+          <a href="#" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="bookmark"></i> Reading List
+            </div>
+            <div class="nav-shortcut">5</div>
+          </a>
+          <a href="tools.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
+            <div class="nav-shortcut">6</div>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-label">Connect</div>
+          <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
+            <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
+            <div class="nav-shortcut">7</div>
+          </a>
+          <a
+            href="https://linkedin.com/in/aaqibbhat"
+            target="_blank"
+            class="nav-item"
+          >
+            <div class="nav-item-left">
+              <i data-feather="linkedin"></i> LinkedIn
+            </div>
+            <i
+              data-feather="arrow-up-right"
+              style="width: 14px; color: var(--text-light)"
+            ></i>
+          </a>
+        </div>
+
+        <div class="theme-switcher">
+          <div class="theme-btn">Light</div>
+          <div class="theme-btn active">Dark</div>
+          <div class="theme-btn">Auto</div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <div class="content-wrapper">
+          <h1 class="hero-title" style="margin-bottom: 1.5rem">About</h1>
+          <p
+            style="
+              font-size: 1.05rem;
+              color: var(--text-muted);
+              margin-bottom: 1rem;
+              line-height: 1.7;
+            "
+          >
+            I'm Aaqib Bhat, an SEO Specialist and Performance Marketer currently
+            based in Srinagar, J&K. I've spent the last few years helping
+            businesses build organic search engines that drive scalable traffic
+            and, more importantly, real revenue.
+          </p>
+          <p
+            style="
+              font-size: 1.05rem;
+              color: var(--text-muted);
+              margin-bottom: 4rem;
+              line-height: 1.7;
+            "
+          >
+            My work spans deep technical audits, semantic keyword mapping, and
+            full-funnel content strategy. I enjoy building things that last and
+            turning complex data into clear growth strategies.
+          </p>
+
+          <h2 class="section-title" style="margin-bottom: 1rem">
+            Personal updates
+          </h2>
+          <div
+            class="update-list"
+            style="margin-bottom: 4rem; border-top: 1px solid var(--border)"
+          >
+            <div
+              class="update-list-item"
+              style="
+                display: flex;
+                gap: 1.5rem;
+                padding: 1.5rem 0;
+                border-bottom: 1px solid var(--border);
+                align-items: flex-start;
+              "
+            >
+              <div
+                class="update-icon"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background: var(--bg-card);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i
+                  data-feather="briefcase"
+                  style="width: 20px; height: 20px"
+                ></i>
+              </div>
+              <div class="update-content" style="flex: 1">
+                <div style="font-weight: 600; margin-bottom: 0.25rem">
+                  Started as SEO Executive
+                </div>
+                <div
+                  style="
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    line-height: 1.5;
+                  "
+                >
+                  Joined a leading digital agency to manage end-to-end SEO
+                  campaigns for B2B and enterprise clients.
+                </div>
+              </div>
+              <div
+                class="update-date"
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-light);
+                  flex-shrink: 0;
+                  padding-top: 0.15rem;
+                "
+              >
+                Oct 2025
+              </div>
+            </div>
+
+            <div
+              class="update-list-item"
+              style="
+                display: flex;
+                gap: 1.5rem;
+                padding: 1.5rem 0;
+                border-bottom: 1px solid var(--border);
+                align-items: flex-start;
+              "
+            >
+              <div
+                class="update-icon"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background: var(--bg-card);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i data-feather="globe" style="width: 20px; height: 20px"></i>
+              </div>
+              <div class="update-content" style="flex: 1">
+                <div style="font-weight: 600; margin-bottom: 0.25rem">
+                  Launched Freelance Consultancy
+                </div>
+                <div
+                  style="
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    line-height: 1.5;
+                  "
+                >
+                  Began taking on independent clients globally, specializing in
+                  E-commerce and Local Service businesses.
+                </div>
+              </div>
+              <div
+                class="update-date"
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-light);
+                  flex-shrink: 0;
+                  padding-top: 0.15rem;
+                "
+              >
+                Jan 2025
+              </div>
+            </div>
+
+            <div
+              class="update-list-item"
+              style="
+                display: flex;
+                gap: 1.5rem;
+                padding: 1.5rem 0;
+                border-bottom: 1px solid var(--border);
+                align-items: flex-start;
+              "
+            >
+              <div
+                class="update-icon"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background: var(--bg-card);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i
+                  data-feather="trending-up"
+                  style="width: 20px; height: 20px; color: #ff622d"
+                ></i>
+              </div>
+              <div class="update-content" style="flex: 1">
+                <div style="font-weight: 600; margin-bottom: 0.25rem">
+                  Hit 500% Traffic Growth
+                </div>
+                <div
+                  style="
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    line-height: 1.5;
+                  "
+                >
+                  Successfully scaled organic bookings for a Kashmir travel
+                  agency through an aggressive on-page restructuring strategy.
+                </div>
+              </div>
+              <div
+                class="update-date"
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-light);
+                  flex-shrink: 0;
+                  padding-top: 0.15rem;
+                "
+              >
+                Dec 2024
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-bottom: 1rem">Tech stack</h2>
+          <p
+            style="
+              font-size: 0.95rem;
+              color: var(--text-muted);
+              margin-bottom: 2rem;
+            "
+          >
+            Over the years, I've built a robust toolkit for audits, tracking,
+            and execution. Here are the tools I rely on daily.
+          </p>
+
+          <div
+            class="tech-stack-list"
+            style="
+              margin-bottom: 4rem;
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+            "
+          >
+            <div
+              class="tech-stack-row"
+              style="display: flex; align-items: center; gap: 2rem"
+            >
+              <div
+                class="tech-stack-label"
+                style="
+                  width: 100px;
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                  color: var(--text-light);
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                "
+              >
+                SEO
+              </div>
+              <div
+                class="tech-stack-icons"
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 1.25rem;
+                  align-items: center;
+                "
+              >
+                <img
+                  src="https://cdn.simpleicons.org/ahrefs/9ca3af"
+                  alt="Ahrefs"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/semrush/9ca3af"
+                  alt="Semrush"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/googleanalytics/9ca3af"
+                  alt="GA4"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/googlesearchconsole/9ca3af"
+                  alt="GSC"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+              </div>
+            </div>
+
+            <div
+              class="tech-stack-row"
+              style="display: flex; align-items: center; gap: 2rem"
+            >
+              <div
+                class="tech-stack-label"
+                style="
+                  width: 100px;
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                  color: var(--text-light);
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                "
+              >
+                Platform
+              </div>
+              <div
+                class="tech-stack-icons"
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 1.25rem;
+                  align-items: center;
+                "
+              >
+                <img
+                  src="https://cdn.simpleicons.org/wordpress/9ca3af"
+                  alt="WordPress"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/shopify/9ca3af"
+                  alt="Shopify"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/webflow/9ca3af"
+                  alt="Webflow"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+              </div>
+            </div>
+
+            <div
+              class="tech-stack-row"
+              style="display: flex; align-items: center; gap: 2rem"
+            >
+              <div
+                class="tech-stack-label"
+                style="
+                  width: 100px;
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                  color: var(--text-light);
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                "
+              >
+                Productivity
+              </div>
+              <div
+                class="tech-stack-icons"
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 1.25rem;
+                  align-items: center;
+                "
+              >
+                <img
+                  src="https://cdn.simpleicons.org/notion/9ca3af"
+                  alt="Notion"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/slack/9ca3af"
+                  alt="Slack"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+                <img
+                  src="https://cdn.simpleicons.org/figma/9ca3af"
+                  alt="Figma"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%) opacity(0.8);
+                    transition: filter 0.2s;
+                  "
+                  onmouseover="this.style.filter = 'none'"
+                  onmouseout="
+                    this.style.filter = 'grayscale(100%) opacity(0.8)'
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-bottom: 1.5rem">Career</h2>
+          <div
+            class="career-list"
+            style="
+              margin-bottom: 4rem;
+              display: flex;
+              flex-direction: column;
+              gap: 2.5rem;
+            "
+          >
+            <div
+              class="career-row"
+              style="display: flex; gap: 2rem; align-items: flex-start"
+            >
+              <div
+                class="career-year"
+                style="
+                  width: 60px;
+                  font-size: 0.95rem;
+                  font-weight: 500;
+                  color: var(--text-light);
+                  flex-shrink: 0;
+                "
+              >
+                2025
+              </div>
+              <div class="career-details">
+                <div
+                  class="career-title"
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 0.25rem;
+                    font-size: 1.05rem;
+                  "
+                >
+                  SEO Executive
+                  <span style="color: var(--text-light); font-weight: 400"
+                    >· Digital Agency</span
+                  >
+                </div>
+                <p
+                  class="career-desc"
+                  style="
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    line-height: 1.6;
+                  "
+                >
+                  Managing a portfolio of high-value client accounts.
+                  Responsible for technical audits, comprehensive keyword
+                  mapping, and on-page optimization.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="career-row"
+              style="display: flex; gap: 2rem; align-items: flex-start"
+            >
+              <div
+                class="career-year"
+                style="
+                  width: 60px;
+                  font-size: 0.95rem;
+                  font-weight: 500;
+                  color: var(--text-light);
+                  flex-shrink: 0;
+                "
+              >
+                2024
+              </div>
+              <div class="career-details">
+                <div
+                  class="career-title"
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 0.25rem;
+                    font-size: 1.05rem;
+                  "
+                >
+                  Freelance SEO Specialist
+                  <span style="color: var(--text-light); font-weight: 400"
+                    >· Independent</span
+                  >
+                </div>
+                <p
+                  class="career-desc"
+                  style="
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    line-height: 1.6;
+                  "
+                >
+                  Partnering directly with founders. Worked extensively with
+                  e-commerce brands to optimize product pages for buyer-intent
+                  keywords.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="career-row"
+              style="display: flex; gap: 2rem; align-items: flex-start"
+            >
+              <div
+                class="career-year"
+                style="
+                  width: 60px;
+                  font-size: 0.95rem;
+                  font-weight: 500;
+                  color: var(--text-light);
+                  flex-shrink: 0;
+                "
+              >
+                2023
+              </div>
+              <div class="career-details">
+                <div
+                  class="career-title"
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 0.25rem;
+                    font-size: 1.05rem;
+                  "
+                >
+                  SEO Analyst
+                  <span style="color: var(--text-light); font-weight: 400"
+                    >· Tech Startup</span
+                  >
+                </div>
+                <p
+                  class="career-desc"
+                  style="
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    line-height: 1.6;
+                  "
+                >
+                  Focused heavily on content gap analysis and link building.
+                  Built scalable outreach campaigns that acquired high-authority
+                  placements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-bottom: 1.5rem">
+            How this site was made
+          </h2>
+          <div
+            class="site-info"
+            style="
+              font-size: 0.95rem;
+              color: var(--text-muted);
+              line-height: 1.7;
+              margin-bottom: 4rem;
+            "
+          >
+            <p style="margin-bottom: 1rem">
+              This portfolio is a completely custom-built static site designed
+              for maximum speed and SEO performance. No heavy frameworks, no
+              bloated templates.
+            </p>
+            <ul
+              style="
+                list-style: disc;
+                padding-left: 1.5rem;
+                margin-bottom: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              "
+            >
+              <li>
+                <strong>HTML/CSS/JS:</strong> Vanilla web technologies for zero
+                bloat.
+              </li>
+              <li>
+                <strong>Feather Icons:</strong> For clean, lightweight vector
+                icons.
+              </li>
+              <li>
+                <strong>Netlify CMS:</strong> A headless CMS to easily manage
+                the blog and writing sections without needing a database.
+              </li>
+              <li>
+                <strong>Vercel:</strong> For lightning-fast global edge network
+                hosting.
+              </li>
+            </ul>
+            <p>
+              The design is inspired by modern, minimalist interfaces, utilizing
+              CSS variables for a seamless dark mode transition.
+            </p>
+          </div>
+
+          <h2 class="section-title" style="margin-bottom: 1.5rem">Connect</h2>
+          <div
+            class="connect-grid"
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1rem;
+              margin-bottom: 2rem;
+            "
+          >
+            <div
+              class="connect-box"
+              style="
+                padding: 1.5rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-md);
+                transition: border-color 0.2s;
+              "
+            >
+              <div
+                style="
+                  font-size: 0.8rem;
+                  color: var(--text-light);
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Email
+              </div>
+              <a
+                href="mailto:workaaqibbhat@gmail.com"
+                style="
+                  font-weight: 500;
+                  font-size: 0.95rem;
+                  color: var(--text-main);
+                "
+                >workaaqibbhat@gmail.com</a
+              >
+            </div>
+
+            <div
+              class="connect-box"
+              style="
+                padding: 1.5rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-md);
+                transition: border-color 0.2s;
+              "
+            >
+              <div
+                style="
+                  font-size: 0.8rem;
+                  color: var(--text-light);
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Social
+              </div>
+              <div style="display: flex; gap: 1rem">
+                <a
+                  href="https://linkedin.com/in/aaqibbhat"
+                  target="_blank"
+                  style="
+                    font-weight: 500;
+                    font-size: 0.95rem;
+                    color: var(--text-main);
+                    display: flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                  "
+                >
+                  <i
+                    data-feather="linkedin"
+                    style="width: 16px; height: 16px"
+                  ></i>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="index.html" class="mobile-nav-item"
+          ><i data-feather="home"></i
+        ></a>
+        <a href="about.html" class="mobile-nav-item active"
+          ><i data-feather="user"></i
+        ></a>
+        <a href="portfolio.html" class="mobile-nav-item"
+          ><i data-feather="code"></i
+        ></a>
+        <a href="#" class="mobile-nav-item"><i data-feather="heart"></i></a>
+        <a href="blog.html" class="mobile-nav-item"
+          ><i data-feather="edit-2"></i
+        ></a>
+        <a href="#" class="mobile-nav-item"><i data-feather="bookmark"></i></a>
+        <a href="tools.html" class="mobile-nav-item"
+          ><i data-feather="tool"></i
+        ></a>
       </div>
-    </main>
+    </nav>
 
-  </div>
-
-  <script>
-    feather.replace();
-  </script>
-</body>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>

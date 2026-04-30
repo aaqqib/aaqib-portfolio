@@ -1,112 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Aaqib Bhat</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="theme.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-</head>
-<body>
-  
-  <div class="app-layout">
-    
-    <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar">
-      <div class="logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      </div>
-
-      <div class="nav-section">
-        <a href="index.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="home"></i> Home</div>
-          <div class="nav-shortcut">1</div>
-        </a>
-        <a href="about.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="user"></i> About</div>
-          <div class="nav-shortcut">2</div>
-        </a>
-        <a href="portfolio.html" class="nav-item active">
-          <div class="nav-item-left"><i data-feather="code"></i> Projects</div>
-          <div class="nav-shortcut">3</div>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label">Resources</div>
-        <a href="#" class="nav-item">
-          <div class="nav-item-left"><i data-feather="edit-2"></i> Writing</div>
-          <div class="nav-shortcut">4</div>
-        </a>
-        <a href="#" class="nav-item">
-          <div class="nav-item-left"><i data-feather="bookmark"></i> Reading List</div>
-          <div class="nav-shortcut">5</div>
-        </a>
-        <a href="tools.html" class="nav-item">
-          <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
-          <div class="nav-shortcut">6</div>
-        </a>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-label">Connect</div>
-        <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
-          <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
-          <div class="nav-shortcut">7</div>
-        </a>
-        <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="nav-item">
-          <div class="nav-item-left"><i data-feather="linkedin"></i> LinkedIn</div>
-          <i data-feather="arrow-up-right" style="width:14px; color:var(--text-light)"></i>
-        </a>
-      </div>
-
-      <div class="theme-switcher">
-        <div class="theme-btn">Light</div>
-        <div class="theme-btn active">Dark</div>
-        <div class="theme-btn">Auto</div>
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <div class="content-wrapper">
-        
-        <h1 class="hero-title" style="margin-bottom: 3rem;">Projects</h1>
-        
-        <div class="projects-stack">
-          
-          <article class="project-card">
-            <div class="project-image-wrap" style="background-color: #2a3d45;">
-              <img src="assets/projects/mockup_travel.png" alt="Thrill Top Journeys">
-            </div>
-            <div class="project-meta">
-              <h3>Thrill Top Journeys</h3>
-              <p class="project-desc">A complete SEO overhaul for a highly competitive travel agency in Kashmir. Led to 500% organic traffic growth and page 1 rankings for top service keywords.</p>
-              <span class="project-tags">Technical SEO · Content Strategy · Local SEO</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image-wrap" style="background-color: #2d452a;">
-              <img src="assets/projects/mockup_keto.png" alt="Hola Keto">
-            </div>
-            <div class="project-meta">
-              <h3>Hola Keto E-Commerce</h3>
-              <p class="project-desc">Buyer-intent keyword targeting and product page optimization for a niche keto e-commerce brand, drastically improving CTR and organic impressions.</p>
-              <span class="project-tags">E-commerce · Keyword Research · Conversion</span>
-            </div>
-          </article>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Aaqib Bhat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- SIDEBAR NAVIGATION -->
+      <aside class="sidebar">
+        <div class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
         </div>
 
+        <div class="nav-section">
+          <a href="index.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="home"></i> Home</div>
+            <div class="nav-shortcut">1</div>
+          </a>
+          <a href="about.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="user"></i> About</div>
+            <div class="nav-shortcut">2</div>
+          </a>
+          <a href="portfolio.html" class="nav-item active">
+            <div class="nav-item-left">
+              <i data-feather="code"></i> Projects
+            </div>
+            <div class="nav-shortcut">3</div>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-label">Resources</div>
+          <a href="blog.html" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="edit-2"></i> Writing
+            </div>
+            <div class="nav-shortcut">4</div>
+          </a>
+          <a href="#" class="nav-item">
+            <div class="nav-item-left">
+              <i data-feather="bookmark"></i> Reading List
+            </div>
+            <div class="nav-shortcut">5</div>
+          </a>
+          <a href="tools.html" class="nav-item">
+            <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
+            <div class="nav-shortcut">6</div>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-label">Connect</div>
+          <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
+            <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
+            <div class="nav-shortcut">7</div>
+          </a>
+          <a
+            href="https://linkedin.com/in/aaqibbhat"
+            target="_blank"
+            class="nav-item"
+          >
+            <div class="nav-item-left">
+              <i data-feather="linkedin"></i> LinkedIn
+            </div>
+            <i
+              data-feather="arrow-up-right"
+              style="width: 14px; color: var(--text-light)"
+            ></i>
+          </a>
+        </div>
+
+        <div class="theme-switcher">
+          <div class="theme-btn">Light</div>
+          <div class="theme-btn active">Dark</div>
+          <div class="theme-btn">Auto</div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <div class="content-wrapper">
+          <h1 class="hero-title" style="margin-bottom: 3rem">Projects</h1>
+
+          <div class="projects-stack">
+            <article class="project-card">
+              <div class="project-image-wrap" style="background-color: #2a3d45">
+                <img
+                  src="assets/projects/mockup_travel.png"
+                  alt="Thrill Top Journeys"
+                />
+              </div>
+              <div class="project-meta">
+                <h3>Thrill Top Journeys</h3>
+                <p class="project-desc">
+                  A complete SEO overhaul for a highly competitive travel agency
+                  in Kashmir. Led to 500% organic traffic growth and page 1
+                  rankings for top service keywords.
+                </p>
+                <span class="project-tags"
+                  >Technical SEO · Content Strategy · Local SEO</span
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image-wrap" style="background-color: #2d452a">
+                <img src="assets/projects/mockup_keto.png" alt="Hola Keto" />
+              </div>
+              <div class="project-meta">
+                <h3>Hola Keto E-Commerce</h3>
+                <p class="project-desc">
+                  Buyer-intent keyword targeting and product page optimization
+                  for a niche keto e-commerce brand, drastically improving CTR
+                  and organic impressions.
+                </p>
+                <span class="project-tags"
+                  >E-commerce · Keyword Research · Conversion</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="index.html" class="mobile-nav-item"
+          ><i data-feather="home"></i
+        ></a>
+        <a href="about.html" class="mobile-nav-item"
+          ><i data-feather="user"></i
+        ></a>
+        <a href="portfolio.html" class="mobile-nav-item active"
+          ><i data-feather="code"></i
+        ></a>
+        <a href="#" class="mobile-nav-item"><i data-feather="heart"></i></a>
+        <a href="blog.html" class="mobile-nav-item"
+          ><i data-feather="edit-2"></i
+        ></a>
+        <a href="#" class="mobile-nav-item"><i data-feather="bookmark"></i></a>
+        <a href="tools.html" class="mobile-nav-item"
+          ><i data-feather="tool"></i
+        ></a>
       </div>
-    </main>
+    </nav>
 
-  </div>
-
-  <script>
-    feather.replace();
-  </script>
-</body>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>

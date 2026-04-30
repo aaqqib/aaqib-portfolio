@@ -10,50 +10,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../blog.css" />
+  <script src="../theme.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
   <!-- Marked.js for markdown rendering -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-logo">Aaqib Bhat<span class="dot">.</span></a>
-      <ul class="nav-links">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#services">Services</a></li>
-        <li><a href="../index.html#work">Work</a></li>
-        <li><a href="../blog.html" style="color:var(--text)">Blog</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="../assets/resume.pdf" download class="btn-cv">Download CV</a>
-        <a href="mailto:workaaqibbhat@gmail.com" class="nav-cta">Hire Me</a>
+  <div class="app-layout">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
       </div>
-    </div>
-  </nav>
 
-  <!-- ARTICLE HERO — filled by JS -->
-  <header class="article-hero" id="article-hero">
-    <div class="container">
-      <a href="../blog.html" class="article-back">← Back to Blog</a>
-      <div class="article-meta">
-        <span class="blog-tag" id="post-category">SEO</span>
-        <span class="article-read-time" id="post-date"></span>
+      <div class="nav-section">
+        <a href="../index.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="home"></i> Home</div>
+          <div class="nav-shortcut">1</div>
+        </a>
+        <a href="../about.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="user"></i> About</div>
+          <div class="nav-shortcut">2</div>
+        </a>
+        <a href="../portfolio.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="code"></i> Projects</div>
+          <div class="nav-shortcut">3</div>
+        </a>
       </div>
-      <h1 class="article-title" id="post-title">Loading...</h1>
-      <p class="article-intro" id="post-intro"></p>
-    </div>
-  </header>
 
-  <!-- ARTICLE BODY — filled by JS -->
-  <main class="article-body">
-    <div class="container">
-      <div class="article-content" id="post-body">
+      <div class="nav-section">
+        <div class="nav-label">Resources</div>
+        <a href="../blog.html" class="nav-item active">
+          <div class="nav-item-left"><i data-feather="edit-2"></i> Writing</div>
+          <div class="nav-shortcut">4</div>
+        </a>
+        <a href="#" class="nav-item">
+          <div class="nav-item-left"><i data-feather="bookmark"></i> Reading List</div>
+          <div class="nav-shortcut">5</div>
+        </a>
+        <a href="../tools.html" class="nav-item">
+          <div class="nav-item-left"><i data-feather="tool"></i> Tools</div>
+          <div class="nav-shortcut">6</div>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Connect</div>
+        <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
+          <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
+          <div class="nav-shortcut">7</div>
+        </a>
+        <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="nav-item">
+          <div class="nav-item-left"><i data-feather="linkedin"></i> LinkedIn</div>
+          <i data-feather="arrow-up-right" style="width:14px; color:var(--text-light)"></i>
+        </a>
+      </div>
+
+      <div class="theme-switcher">
+        <div class="theme-btn">Light</div>
+        <div class="theme-btn active">Dark</div>
+        <div class="theme-btn">Auto</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- ARTICLE HERO — filled by JS -->
+        <header class="article-hero" id="article-hero" style="padding-top:0;">
+          <a href="../blog.html" class="article-back" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;color:var(--text-muted);"><i data-feather="arrow-left" style="width:16px;height:16px;"></i> Back to Writing</a>
+          <div class="article-meta" style="margin-bottom: 1rem;">
+            <span class="blog-tag" id="post-category">SEO</span>
+            <span class="article-read-time" id="post-date" style="color:var(--text-light); font-size:0.85rem; margin-left:1rem;"></span>
+          </div>
+          <h1 class="hero-title" id="post-title" style="margin-bottom: 1rem;">Loading...</h1>
+          <p class="article-intro" id="post-intro" style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 3rem;"></p>
+        </header>
+
+        <div class="article-content" id="post-body">
         <!-- Loading state -->
         <div style="display:flex;gap:.5rem;padding:2rem 0">
           <div class="loading-dot"></div>
@@ -61,19 +99,29 @@
           <div class="loading-dot"></div>
         </div>
       </div>
-    </div>
-  </main>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">Aaqib Bhat<span class="dot">.</span></span>
-      <span class="footer-copy">© 2026 Aaqib Bhat · SEO Specialist</span>
-      <a href="../blog.html" class="footer-back">← Back to Blog</a>
-    </div>
-  </footer>
+      </div>
+    </main>
 
-  <script src="../script.js"></script>
+  </div>
+
+  <!-- MOBILE NAVIGATION -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="../index.html" class="mobile-nav-item"><i data-feather="home"></i></a>
+      <a href="../about.html" class="mobile-nav-item"><i data-feather="user"></i></a>
+      <a href="../portfolio.html" class="mobile-nav-item"><i data-feather="code"></i></a>
+      <a href="#" class="mobile-nav-item"><i data-feather="heart"></i></a>
+      <a href="../blog.html" class="mobile-nav-item active"><i data-feather="edit-2"></i></a>
+      <a href="#" class="mobile-nav-item"><i data-feather="bookmark"></i></a>
+      <a href="../tools.html" class="mobile-nav-item"><i data-feather="tool"></i></a>
+    </div>
+  </nav>
+
+  <script>
+    feather.replace();
+  </script>
   <script>
   // ── POST RENDERER ───────────────────────────────────────
   // Gets the slug from URL, fetches the raw HTML file,
