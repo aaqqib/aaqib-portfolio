@@ -95,13 +95,26 @@
         <div class="content-wrapper">
           <h1 class="hero-title" style="margin-bottom: 3rem">Projects</h1>
 
+          <style>
+            .slider-track::-webkit-scrollbar { display: none; }
+            .slider-btn:hover { background: var(--hover-bg) !important; }
+          </style>
+
           <div class="projects-stack">
             <article class="project-card">
-              <div class="project-image-wrap" style="background-color: #2a3d45">
-                <img
-                  src="assets/projects/mockup_travel.png"
-                  alt="Thrill Top Journeys"
-                />
+              <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem;">
+                <div class="slider-track" id="track-1" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
+                  <div class="slide" style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2a3d45; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <span style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1 / 2 &mdash; Website</span>
+                    <img src="assets/projects/mockup_travel.png" alt="Thrill Top Journeys" style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                  </div>
+                  <div class="slide" style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2429; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <span style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2 / 2 &mdash; Performance</span>
+                    <img src="https://placehold.co/800x450/222/fff?text=Performance+Metrics" alt="Performance Metrics" style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                  </div>
+                </div>
+                <button class="slider-btn" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s;" onclick="document.getElementById('track-1').scrollBy({left: -500, behavior: 'smooth'})"><i data-feather="chevron-left" style="width: 18px;"></i></button>
+                <button class="slider-btn" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s;" onclick="document.getElementById('track-1').scrollBy({left: 500, behavior: 'smooth'})"><i data-feather="chevron-right" style="width: 18px;"></i></button>
               </div>
               <div class="project-meta">
                 <h3>Thrill Top Journeys</h3>
@@ -117,8 +130,19 @@
             </article>
 
             <article class="project-card">
-              <div class="project-image-wrap" style="background-color: #2d452a">
-                <img src="assets/projects/mockup_keto.png" alt="Hola Keto" />
+              <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem;">
+                <div class="slider-track" id="track-2" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
+                  <div class="slide" style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <span style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1 / 2 &mdash; Website</span>
+                    <img src="assets/projects/mockup_keto.png" alt="Hola Keto" style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                  </div>
+                  <div class="slide" style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative;">
+                    <span style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2 / 2 &mdash; Performance</span>
+                    <img src="https://placehold.co/800x450/222/fff?text=Performance+Metrics" alt="Performance Metrics" style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                  </div>
+                </div>
+                <button class="slider-btn" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s;" onclick="document.getElementById('track-2').scrollBy({left: -500, behavior: 'smooth'})"><i data-feather="chevron-left" style="width: 18px;"></i></button>
+                <button class="slider-btn" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s;" onclick="document.getElementById('track-2').scrollBy({left: 500, behavior: 'smooth'})"><i data-feather="chevron-right" style="width: 18px;"></i></button>
               </div>
               <div class="project-meta">
                 <h3>Hola Keto E-Commerce</h3>
