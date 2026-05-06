@@ -52,5 +52,25 @@
         updateActiveButton(selectedTheme);
       });
     });
+
+    // Keyboard shortcuts for navigation
+    document.addEventListener('keydown', (e) => {
+      // Ignore if user is typing in an input field
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || e.target.isContentEditable) {
+        return;
+      }
+      
+      const navItems = document.querySelectorAll('.nav-item');
+      for (const item of navItems) {
+        const shortcutEl = item.querySelector('.nav-shortcut');
+        if (shortcutEl && shortcutEl.textContent.trim() === e.key) {
+          const href = item.getAttribute('href');
+          if (href && href !== '#') {
+            window.location.href = href;
+          }
+          break;
+        }
+      }
+    });
   });
 })();
