@@ -115,38 +115,34 @@
       if (typeof feather !== 'undefined') feather.replace();
     }
 
+    const startOnInteraction = () => {
+      if (audio.paused && sessionStorage.getItem('globalMusicPlaying') !== 'false') {
+        attemptPlay();
+      }
+      document.removeEventListener('click', startOnInteraction);
+      document.removeEventListener('keydown', startOnInteraction);
+      document.removeEventListener('touchstart', startOnInteraction);
+    };
+
     function attemptPlay() {
       audio.play().then(() => {
         sessionStorage.setItem('globalMusicPlaying', 'true');
         updateBtnIcon();
       }).catch((e) => {
         console.log("Autoplay blocked by browser. Waiting for interaction.");
-        // Do NOT set it to 'false' here, because 'false' means user explicitly paused.
         updateBtnIcon();
+        document.addEventListener('click', startOnInteraction);
+        document.addEventListener('keydown', startOnInteraction);
+        document.addEventListener('touchstart', startOnInteraction);
       });
     }
 
     const explicitState = sessionStorage.getItem('globalMusicPlaying');
 
     // Initialize Autoplay or Restore State
-    if (explicitState === null) {
-      // First visit: attempt autoplay
-      attemptPlay();
-      // If blocked, play on very first interaction with the site
-      const startOnInteraction = () => {
-        if (audio.paused && sessionStorage.getItem('globalMusicPlaying') !== 'false') {
-          attemptPlay();
-        }
-        document.removeEventListener('click', startOnInteraction);
-        document.removeEventListener('keydown', startOnInteraction);
-      };
-      document.addEventListener('click', startOnInteraction);
-      document.addEventListener('keydown', startOnInteraction);
-    } else if (explicitState === 'true') {
-      // Navigated from another page while playing
+    if (explicitState === null || explicitState === 'true') {
       attemptPlay();
     } else {
-      // Navigated from another page while paused
       updateBtnIcon();
     }
 
