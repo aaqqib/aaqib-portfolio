@@ -57,7 +57,7 @@
         </a>
       </div>
 
-    <div class="nav-section">
+      <div class="nav-section">
         <div class="nav-label">Connect</div>
         <a href="mailto:workaaqibbhat@gmail.com" class="nav-item">
           <div class="nav-item-left"><i data-feather="mail"></i> Contact</div>
@@ -65,7 +65,8 @@
         </a>
         <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="nav-item">
           <div class="nav-item-left">
-             <img src="assets/projects/linkedin.svg" alt="LinkedIn" style="height: 16px; width: 16px;"> <Span>LinkedIn</Span>
+            <img src="assets/projects/linkedin.svg" alt="LinkedIn" style="height: 16px; width: 16px;">
+            <Span>LinkedIn</Span>
           </div>
           <i data-feather="arrow-up-right" style="width: 14px; color: var(--text-light)"></i>
         </a>
@@ -81,7 +82,10 @@
     <!-- MAIN CONTENT -->
     <main class="main-content">
       <div class="content-wrapper">
-        <h1 class="hero-title" style="margin-bottom: 3rem">Projects</h1>
+        <h1 class="hero-title" style="margin-bottom: 1rem">Projects</h1>
+        <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 3rem;">
+          A selection of recent projects covering technical SEO, content strategy, and website development.
+        </p>
 
         <style>
           .slider-track::-webkit-scrollbar {
@@ -91,38 +95,69 @@
           .slider-btn:hover {
             background: var(--hover-bg) !important;
           }
+
+          .slide {
+            padding-top: 3.5rem !important;
+          }
+
+          @media (max-width: 768px) {
+            .slide {
+              aspect-ratio: auto !important;
+              padding-bottom: 1.5rem !important;
+            }
+            .slide img {
+              width: 100% !important;
+              height: auto !important;
+              max-height: none !important;
+            }
+            .slider-wrapper {
+              padding-bottom: 3.5rem !important;
+              margin-bottom: 0.5rem !important;
+            }
+            .slider-btn {
+              top: auto !important;
+              bottom: 0 !important;
+              transform: none !important;
+            }
+            .slider-btn:nth-of-type(1) {
+              left: calc(50% - 42px) !important;
+            }
+            .slider-btn:nth-of-type(2) {
+              right: calc(50% - 42px) !important;
+            }
+          }
         </style>
 
-    <!-- Thrill Top Journeys Website -->
-    
+        <!-- Thrill Top Journeys Website -->
+
         <div class="projects-stack">
           <article class="project-card">
             <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem;">
               <div class="slider-track" id="track-1"
                 style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2a3d45; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2a3d45; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash; Thrill Top Journeys Website</span>
                   <img src="assets/projects/thrillopwebsite.png" alt="Thrill Top Journeys"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2429; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2429; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
                     / 3 &mdash; Google Search Console (6 mo)</span>
                   <img src="assets/projects/thrillopgsc.png" alt="Performance Metrics"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2429; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2429; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">3
                     / 3 &mdash; Ahrefs Traffic Overview</span>
                   <img src="assets/projects/thrillopahrefs.png" alt="Ahrefs Traffic Overview"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
               </div>
               <button class="slider-btn"
@@ -136,47 +171,44 @@
             </div>
             <div class="project-meta">
               <h3>Thrill Top Journeys</h3>
-              <p class="project-desc">
-                <a href="https://thrillop.com" target="_blank" rel="noopener noreferrer"> <strong>Thrillop</strong></a> came to me as a brand new website with zero traffic,
-                 no rankings, and no content. Built the entire SEO foundation from scratch,
-                  keyword research across Kashmir travel queries, on-page optimisation
-                   for all service and package pages, technical setup including tracking via 
-                   GSC and GA4, and a content strategy built around high-intent travel keywords.
-Published SEO-optimised blogs consistently targeting long-tail Kashmir travel queries.
- Within 6 months, organic impressions grew from ~2K to 424K and clicks increased by 
- 740% — from 99 to 832 monthly clicks — with average position improving from 10.3 to 7.2.
-              </p>
+              <div class="project-desc">
+                <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
+                  <li><a href="https://thrillop.com" target="_blank" rel="noopener noreferrer"><strong>Thrillop</strong></a> came to me as a brand new website with zero traffic, no rankings, and no content. Built the entire SEO foundation from scratch, keyword research across Kashmir travel queries, on-page optimisation for all service and package pages, technical setup including tracking via GSC and GA4, and a content strategy built around high-intent travel keywords.</li>
+                  <li>Published SEO-optimised blogs consistently targeting long-tail Kashmir travel queries.</li>
+                  <li>Within 6 months, organic impressions grew from ~2K to 424K and clicks increased by 740% — from 99 to 832 monthly clicks — with average position improving from 10.3 to 7.2.</li>
+                </ul>
+              </div>
               <span class="project-tags">Travel Niche · Content Strategy · On-Page SEO · Website Development</span>
             </div>
           </article>
-<!-- Insights Marketing & Communication -->
+          <!-- Insights Marketing & Communication -->
           <article class="project-card">
             <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem;">
               <div class="slider-track" id="track-2"
                 style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash;Insights Marketing & Communication — insightsdubai.com</span>
                   <img src="assets/projects/imc website.png" alt="Hola Keto"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
                     / 3 &mdash; Google Search Console Performance</span>
                   <img src="assets/projects/imc_gsc_6months.png" alt="Performance Metrics"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash;Insights Marketing & Communication — insightsdubai.com</span>
                   <img src="assets/projects/imc_ahrefs_traffic.png" alt="IMC Ahrefs Traffic Overview"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
               </div>
               <button class="slider-btn"
@@ -190,49 +222,45 @@ Published SEO-optimised blogs consistently targeting long-tail Kashmir travel qu
             </div>
             <div class="project-meta">
               <h3>Insights Marketing & Communication — insightsdubai.com</h3>
-              <p class="project-desc">
-                Inherited a site that had recently migrated to a new theme — riddled with 404 errors,
-                 crawl issues, and zero on-page optimisation across all service pages. Conducted a full
-                  technical SEO audit using Screaming Frog, resolved crawl errors and indexability gaps,
-                   and rebuilt the on-page foundation across ~30 pages including core service pages for 
-                   Google Ads, Social Media Marketing, and more.
-Performed in-depth keyword research using SEMrush and Google Keyword Planner with UAE market filters, 
-rewrote title tags, meta descriptions, H1s, and body content across all service pages, and developed a 
-two-track blog strategy targeting both high-volume UAE keywords and topical authority content. 
-<li>
-Result: Average search position improved from 62.3 to 23.9 — a 38-position jump — and organic clicks grew 
-from 503 to 758 (+51%) within 6 months.</li></p>
+              <div class="project-desc">
+                <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
+                  <li>Inherited a site that had recently migrated to a new theme — riddled with 404 errors, crawl issues, and zero on-page optimisation across all service pages.</li>
+                  <li>Conducted a full technical SEO audit using Screaming Frog, resolved crawl errors and indexability gaps, and rebuilt the on-page foundation across ~30 pages including core service pages for Google Ads, Social Media Marketing, and more.</li>
+                  <li>Performed in-depth keyword research using SEMrush and Google Keyword Planner with UAE market filters, rewrote title tags, meta descriptions, H1s, and body content across all service pages, and developed a two-track blog strategy targeting both high-volume UAE keywords and topical authority content.</li>
+                  <li>Result: Average search position improved from 62.3 to 23.9 — a 38-position jump — and organic clicks grew from 503 to 758 (+51%) within 6 months.</li>
+                </ul>
+              </div>
               <span class="project-tags">Technical SEO · On-Page Optimisation · Content Strategy · B2B FMCG</span>
             </div>
           </article>
           <!-- babarry Website -->
-<article class="project-card">
+          <article class="project-card">
             <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem;">
               <div class="slider-track" id="track-3"
                 style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash;B A Barry Group — babarry.com</span>
                   <img src="assets/projects/babarry website.png" alt="B A Barry Group — babarry.com"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
                     / 3 &mdash; Google Search Console Performance</span>
                   <img src="assets/projects/babarry_gsc_6months.png" alt="Performance Metrics"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash;B A Barry Group — babarry.com</span>
                   <img src="assets/projects/babarry_ahrefs_traffic.png" alt="B A Barry Ahrefs Traffic Overview"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
               </div>
               <button class="slider-btn"
@@ -246,12 +274,15 @@ from 503 to 758 (+51%) within 6 months.</li></p>
             </div>
             <div class="project-meta">
               <h3>B A Barry Group — babarry.com</h3>
-              <p class="project-desc">
-               B A Barry is a Dubai-based FMCG and commodities trading company (DMCC free zone) supplying bulk sugar and cocoa powder to B2B buyers globally. Brought in to diagnose a traffic drop and build a long-term SEO foundation.
-Identified a February 2026 site outage (5xx errors) as the root cause of a 38–47% traffic collapse. Conducted a full GSC and GA4 analysis, audited 14 pages sitewide for weak or truncated title tags and meta descriptions, and delivered optimised copy for all 14 — client implemented immediately.
-Performed deep landing page audits for three core product pages (ICUMSA 45 Sugar, Cocoa Powder, Organic Sugar) — diagnosing intent mismatches, CTR killers, missing content sections, and structural issues. Delivered new titles, metas, H1s, and CMS-ready body copy across all three pages.
-Identified 113 crawlable 404 pages, missing robots.txt, duplicate canonicals, and asset file errors wasting crawl budget. Conducted a full keyword gap analysis, identified 30 net-new blog opportunities across 5 content clusters, and wrote 4 SEO blogs targeting high-intent commercial keywords.
-Result: Organic sessions grew 44% month-on-month (322 → 465), organic overtook Direct as the #1 traffic channel for the first time, and average search position improved from 16.4 to 7.7.</p>
+              <div class="project-desc">
+                <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
+                  <li>B A Barry is a Dubai-based FMCG and commodities trading company (DMCC free zone) supplying bulk sugar and cocoa powder to B2B buyers globally. Brought in to diagnose a traffic drop and build a long-term SEO foundation.</li>
+                  <li>Identified a February 2026 site outage (5xx errors) as the root cause of a 38–47% traffic collapse. Conducted a full GSC and GA4 analysis, audited 14 pages sitewide for weak or truncated title tags and meta descriptions, and delivered optimised copy for all 14 — client implemented immediately.</li>
+                  <li>Performed deep landing page audits for three core product pages (ICUMSA 45 Sugar, Cocoa Powder, Organic Sugar) — diagnosing intent mismatches, CTR killers, missing content sections, and structural issues. Delivered new titles, metas, H1s, and CMS-ready body copy across all three pages.</li>
+                  <li>Identified 113 crawlable 404 pages, missing robots.txt, duplicate canonicals, and asset file errors wasting crawl budget. Conducted a full keyword gap analysis, identified 30 net-new blog opportunities across 5 content clusters, and wrote 4 SEO blogs targeting high-intent commercial keywords.</li>
+                  <li>Result: Organic sessions grew 44% month-on-month (322 → 465), organic overtook Direct as the #1 traffic channel for the first time, and average search position improved from 16.4 to 7.7.</li>
+                </ul>
+              </div>
               <span class="project-tags">Travel Guide Niche · Website Development · SEO</span>
             </div>
           </article>
@@ -261,28 +292,28 @@ Result: Organic sessions grew 44% month-on-month (322 → 465), organic overtook
               <div class="slider-track" id="track-4"
                 style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash;Kashmir Travel Guide Website</span>
                   <img src="assets/projects/kashmirtravelguidewebsie.png" alt="Hola Keto"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
                     / 3 &mdash; Google Search Console Performance</span>
                   <img src="assets/projects/ktg_gsc.png" alt="Performance Metrics"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 3 &mdash;Kashmir Travel Guide ahrefs traffic/span>
-                  <img src="assets/projects/kashmirtravelguidewebsie.png" alt="Hola Keto"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    <img src="assets/projects/kashmirtravelguidewebsie.png" alt="Hola Keto"
+                      style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
               </div>
               <button class="slider-btn"
@@ -296,9 +327,13 @@ Result: Organic sessions grew 44% month-on-month (322 → 465), organic overtook
             </div>
             <div class="project-meta">
               <h3>Kashmir Travel Guide</h3>
-              <p class="project-desc">
-                A personal project built from the ground up — from niche research and tech stack selection to content architecture and backend development. Mapped out topical clusters targeting a wide range of Kashmir travel keywords, set up GSC, GA4, and Google Tag Manager, and built a custom backend that pushes content changes live instantly.
-The site is designed for long-term monetisation through AdSense, guest posts, and link selling — leveraging local Kashmir knowledge as a content advantage that generic travel sites can't replicate.</p>
+              <div class="project-desc">
+                <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
+                  <li>A personal project built from the ground up — from niche research and tech stack selection to content architecture and backend development.</li>
+                  <li>Mapped out topical clusters targeting a wide range of Kashmir travel keywords, set up GSC, GA4, and Google Tag Manager, and built a custom backend that pushes content changes live instantly.</li>
+                  <li>The site is designed for long-term monetisation through AdSense, guest posts, and link selling — leveraging local Kashmir knowledge as a content advantage that generic travel sites can't replicate.</li>
+                </ul>
+              </div>
               <span class="project-tags">Travel Guide Niche · Website Development · SEO</span>
             </div>
           </article>
@@ -308,20 +343,20 @@ The site is designed for long-term monetisation through AdSense, guest posts, an
               <div class="slider-track" id="track-5"
                 style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
                     / 2 &mdash; Website</span>
                   <img src="assets/projects/mockup_keto.png" alt="Hola Keto"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
                 <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 2rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: 300px;">
+                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
                     / 2 &mdash; Performance</span>
                   <img src="https://placehold.co/800x450/222/fff?text=Performance+Metrics" alt="Performance Metrics"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm);" />
+                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
               </div>
               <button class="slider-btn"
@@ -335,11 +370,11 @@ The site is designed for long-term monetisation through AdSense, guest posts, an
             </div>
             <div class="project-meta">
               <h3>Hola Keto E-Commerce</h3>
-              <p class="project-desc">
-                Buyer-intent keyword targeting and product page optimization
-                for a niche keto e-commerce brand, drastically improving CTR
-                and organic impressions.
-              </p>
+              <div class="project-desc">
+                <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
+                  <li>Buyer-intent keyword targeting and product page optimization for a niche keto e-commerce brand, drastically improving CTR and organic impressions.</li>
+                </ul>
+              </div>
               <span class="project-tags">E-commerce · Keyword Research · Conversion</span>
             </div>
           </article>
@@ -347,19 +382,25 @@ The site is designed for long-term monetisation through AdSense, guest posts, an
       </div>
     </main>
   </div>
-<!-- MOBILE NAVIGATION -->
-    <nav class="mobile-nav">
+  <!-- MOBILE NAVIGATION -->
+  <nav class="mobile-nav">
     <div class="mobile-nav-inner">
-      <a href="index.html" class="mobile-nav-item" title="Home"><i data-feather="home"></i><span class="nav-text">Home</span></a>
-      <a href="about.html" class="mobile-nav-item" title="About"><i data-feather="user"></i><span class="nav-text">About</span></a>
-      <a href="portfolio.html" class="mobile-nav-item active" title="Projects"><i data-feather="code"></i><span class="nav-text">Projects</span></a>
+      <a href="index.html" class="mobile-nav-item" title="Home"><i data-feather="home"></i><span
+          class="nav-text">Home</span></a>
+      <a href="about.html" class="mobile-nav-item" title="About"><i data-feather="user"></i><span
+          class="nav-text">About</span></a>
+      <a href="portfolio.html" class="mobile-nav-item active" title="Projects"><i data-feather="code"></i><span
+          class="nav-text">Projects</span></a>
       <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="mobile-nav-item" title="LinkedIn">
         <img src="assets/projects/linkedin.svg" alt="LinkedIn" style="height: 16px; width: 16px; ">
         <span class="nav-text">LinkedIn</span>
       </a>
-      <a href="blog.html" class="mobile-nav-item" title="Writing"><i data-feather="edit-2"></i><span class="nav-text">Writing</span></a>
-      <a href="reading-list.html" class="mobile-nav-item" title="Reading List"><i data-feather="bookmark"></i><span class="nav-text">Reading</span></a>
-      <a href="tools.html" class="mobile-nav-item" title="Tools"><i data-feather="tool"></i><span class="nav-text">Tools</span></a>
+      <a href="blog.html" class="mobile-nav-item" title="Writing"><i data-feather="edit-2"></i><span
+          class="nav-text">Writing</span></a>
+      <a href="reading-list.html" class="mobile-nav-item" title="Reading List"><i data-feather="bookmark"></i><span
+          class="nav-text">Reading</span></a>
+      <a href="tools.html" class="mobile-nav-item" title="Tools"><i data-feather="tool"></i><span
+          class="nav-text">Tools</span></a>
     </div>
   </nav>
   <script>

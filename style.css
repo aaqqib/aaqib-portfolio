@@ -51,6 +51,19 @@ a {
   color: inherit;
 }
 
+.project-desc a {
+  text-decoration: underline;
+  text-decoration-color: var(--text-light);
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.project-desc a:hover {
+  text-decoration-color: var(--text-main);
+  color: var(--text-main);
+}
+
 ul {
   list-style: none;
 }
@@ -168,7 +181,7 @@ ul {
   text-align: center;
   font-size: 0.8rem;
   color: var(--text-muted);
-  padding: 0.35rem 0;
+  padding: 0.35rem 0.75rem;
   border-radius: 100px;
   cursor: pointer;
 }
@@ -189,10 +202,10 @@ h4 {
 
 .hero-title {
   font-size: 5rem;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .hero-subtitle {
@@ -201,6 +214,8 @@ h4 {
   line-height: 1.6;
   margin-bottom: 2.5rem;
   max-width: 710px;
+  letter-spacing: 0.15px;
+  font-weight: 400;
 }
 
 .section-title {
@@ -623,7 +638,26 @@ h4 {
   display: none;
 }
 @media (max-width: 900px) {
-  .sidebar { display: none; }
+  .sidebar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: auto;
+    height: auto;
+    border: none;
+    background: transparent;
+    padding: 0;
+    z-index: 100;
+  }
+  .sidebar > *:not(.theme-switcher) {
+    display: none;
+  }
+  .theme-switcher {
+    margin-top: 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
   .mobile-nav {
     display: block;
     position: fixed;
