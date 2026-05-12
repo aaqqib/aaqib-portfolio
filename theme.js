@@ -96,6 +96,7 @@
 
     const audio = document.createElement('audio');
     audio.loop = true;
+    audio.volume = 0.5;
     audio.innerHTML = '<source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">';
     document.body.appendChild(audio);
 
