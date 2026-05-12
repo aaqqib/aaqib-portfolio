@@ -104,35 +104,35 @@
     btn.title = "Play/Pause Ambient Music";
     document.body.appendChild(btn);
 
-    let isPlaying = sessionStorage.getItem('globalMusicPlaying') === 'true';
     const savedTime = sessionStorage.getItem('globalMusicTime');
     if (savedTime) audio.currentTime = parseFloat(savedTime);
 
     function updateBtnIcon() {
-      btn.innerHTML = isPlaying ? '<i data-feather="pause"></i>' : '<i data-feather="play"></i>';
+      const isPaused = audio.paused;
+      btn.innerHTML = isPaused ? '<i data-feather="play"></i>' : '<i data-feather="pause"></i>';
       if (typeof feather !== 'undefined') feather.replace();
     }
 
     function attemptPlay() {
       audio.play().then(() => {
-        isPlaying = true;
         sessionStorage.setItem('globalMusicPlaying', 'true');
         updateBtnIcon();
       }).catch((e) => {
         console.log("Autoplay blocked by browser. Waiting for interaction.");
-        isPlaying = false;
-        sessionStorage.setItem('globalMusicPlaying', 'false');
+        // Do NOT set it to 'false' here, because 'false' means user explicitly paused.
         updateBtnIcon();
       });
     }
 
+    const explicitState = sessionStorage.getItem('globalMusicPlaying');
+
     // Initialize Autoplay or Restore State
-    if (sessionStorage.getItem('globalMusicPlaying') === null) {
+    if (explicitState === null) {
       // First visit: attempt autoplay
       attemptPlay();
       // If blocked, play on very first interaction with the site
       const startOnInteraction = () => {
-        if (!isPlaying && sessionStorage.getItem('globalMusicPlaying') !== 'false') {
+        if (audio.paused && sessionStorage.getItem('globalMusicPlaying') !== 'false') {
           attemptPlay();
         }
         document.removeEventListener('click', startOnInteraction);
@@ -140,7 +140,7 @@
       };
       document.addEventListener('click', startOnInteraction);
       document.addEventListener('keydown', startOnInteraction);
-    } else if (isPlaying) {
+    } else if (explicitState === 'true') {
       // Navigated from another page while playing
       attemptPlay();
     } else {
@@ -150,11 +150,11 @@
 
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (isPlaying) {
+      if (!audio.paused) {
         audio.pause();
-        isPlaying = false;
         sessionStorage.setItem('globalMusicPlaying', 'false');
       } else {
+        sessionStorage.setItem('globalMusicPlaying', 'true');
         attemptPlay();
       }
       updateBtnIcon();
