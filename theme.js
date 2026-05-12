@@ -97,7 +97,8 @@
     const audio = document.createElement('audio');
     audio.loop = true;
     audio.volume = 0.5;
-    audio.innerHTML = '<source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">';
+    audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+    audio.preload = 'auto';
     document.body.appendChild(audio);
 
     const btn = document.createElement('button');
