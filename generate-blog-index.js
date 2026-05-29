@@ -9,17 +9,17 @@ const blogDir = path.join(__dirname, 'blog');
 const outputFile = path.join(__dirname, 'blog-index.json');
 
 // Skip these files
-const SKIP_FILES = ['blog-post-template.html'];
+const SKIP_FILES = ['blog-post-template.html', 'post.html'];
 
 function extractFrontmatter(content) {
-  // Match YAML frontmatter between --- markers
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  // Match YAML frontmatter between --- markers supporting optional \r characters for Windows line endings
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return {};
 
   const yaml = match[1];
   const data = {};
 
-  yaml.split('\n').forEach(line => {
+  yaml.split(/\r?\n/).forEach(line => {
     const colonIndex = line.indexOf(':');
     if (colonIndex === -1) return;
     const key = line.slice(0, colonIndex).trim();

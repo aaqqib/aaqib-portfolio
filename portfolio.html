@@ -14,11 +14,7 @@
   <div class="app-layout">
     <!-- SIDEBAR NAVIGATION -->
     <aside class="sidebar">
-      <div class="logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-        </svg>
-      </div>
+
 
       <div class="nav-section">
         <a href="index.html" class="nav-item">
@@ -88,7 +84,7 @@
         </p>
 
         <!-- Category Filter Buttons -->
-        <div class="filter-container" style="display: flex; gap: 0.75rem; margin-bottom: 3rem; flex-wrap: wrap;">
+        <div class="filter-container" style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
           <button class="filter-btn active" data-category="all">
             <i data-feather="grid" style="width: 14px; height: 14px;"></i> All
           </button>
@@ -130,10 +126,17 @@
             color: #000 !important;
             border-color: var(--text-main);
           }
+          .projects-stack {
+            gap: 0 !important;
+          }
+          .category-title {
+            margin-bottom: 1rem !important;
+          }
           .project-card {
             transition: opacity 0.3s ease, transform 0.3s ease;
             opacity: 1;
             transform: scale(1);
+            margin-bottom: 3rem;
           }
           .slider-track::-webkit-scrollbar {
             display: none;
@@ -397,34 +400,11 @@
           </article>
           <!-- HRSG UAE -->
           <article class="project-card" data-category="seo">
-            <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem;">
-              <div class="slider-track" id="track-5"
-                style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; border-radius: var(--radius-md); border: 1px solid var(--border); -ms-overflow-style: none; scrollbar-width: none;">
-                <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #2d452a; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
-                  <span
-                    style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">1
-                    / 2 &mdash; HRSG UAE Website</span>
-                  <img src="assets/projects/hrsg uae.png" alt="HRSG UAE Website"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
-                </div>
-                <div class="slide"
-                  style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
-                  <span
-                    style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
-                    / 2 &mdash; Performance</span>
-                  <img src="/assets/projects/hrsg uae performance.png" alt="Performance Metrics"
-                    style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
-                </div>
+            <div class="slider-wrapper" style="position: relative; margin-bottom: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border); overflow: hidden;">
+              <div style="background-color: #1a2629; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+                <img src="assets/projects/hrsg uae.png" alt="HRSG UAE Website"
+                  style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
               </div>
-              <button class="slider-btn"
-                style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s;"
-                onclick="document.getElementById('track-5').scrollBy({left: -500, behavior: 'smooth'})"><i
-                  data-feather="chevron-left" style="width: 18px;"></i></button>
-              <button class="slider-btn"
-                style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-main); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.2s;"
-                onclick="document.getElementById('track-5').scrollBy({left: 500, behavior: 'smooth'})"><i
-                  data-feather="chevron-right" style="width: 18px;"></i></button>
             </div>
             <div class="project-meta">
               <h3>Starting working on seo for HRSG UAE</h3>
@@ -459,8 +439,8 @@
                   style="flex: 0 0 100%; scroll-snap-align: start; background-color: #1a2618; padding: 1rem; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 16/9; min-height: auto;">
                   <span
                     style="position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">2
-                    / 2 &mdash; Performance</span>
-                  <img src="/assets/projects/my first google ads campaign.png" alt="Performance Metrics"
+                    / 2 &mdash; Performance Chart</span>
+                  <img src="assets/projects/google-ads-performance.png" alt="Performance Chart"
                     style="max-width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: var(--radius-sm); max-height: 100%; object-fit: contain;" />
                 </div>
               </div>
@@ -537,10 +517,17 @@
           const category = btn.getAttribute('data-category');
 
           // Filter category titles
+          let firstVisibleTitle = true;
           categoryTitles.forEach(title => {
             const titleCategory = title.getAttribute('data-category');
             if (category === 'all' || titleCategory === category) {
               title.style.display = 'flex';
+              if (firstVisibleTitle) {
+                title.style.marginTop = '0';
+                firstVisibleTitle = false;
+              } else {
+                title.style.marginTop = '2.5rem';
+              }
             } else {
               title.style.display = 'none';
             }
