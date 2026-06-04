@@ -23,7 +23,7 @@
 .blog-hero-title {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
   margin-bottom: 1.5rem;
@@ -56,7 +56,7 @@
   padding: 2.5rem;
 }
 .blog-card--featured .blog-card-title {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
   margin: 1rem 0 0.75rem;
   max-width: 700px;
 }
@@ -114,7 +114,7 @@
 .blog-card-title {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -124,7 +124,7 @@
 .blog-card:hover .blog-card-title { color: var(--accent); }
 .blog-card--featured:hover .blog-card-title { color: var(--accent); }
 .blog-card-excerpt {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.7;
   font-weight: 300;
@@ -170,14 +170,14 @@
 .article-title {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
   max-width: 800px;
   margin-bottom: 1.5rem;
 }
 .article-intro {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.75;
   max-width: 680px;
@@ -194,7 +194,7 @@
 .article-content h2 {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   letter-spacing: -0.02em;
   color: var(--text);
   margin: 2.5rem 0 1rem;
@@ -205,12 +205,12 @@
 .article-content h3 {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text);
   margin: 1.75rem 0 0.75rem;
 }
 .article-content p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.85;
   margin-bottom: 1.25rem;
@@ -228,7 +228,7 @@
   padding-left: 1.5rem;
   position: relative;
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.75;
   margin-bottom: 0.5rem;
   font-weight: 300;
@@ -242,7 +242,7 @@
 }
 .article-content ol li {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.75;
   margin-bottom: 0.5rem;
   font-weight: 300;
@@ -303,7 +303,7 @@
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .blog-grid { grid-template-columns: 1fr; }
-  .article-title { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+  .article-title { font-size: clamp(1.35rem, 5vw, 1.75rem); }
 }
 
 /* ── LOADING & EMPTY STATES ──────────────────────────────── */
@@ -337,7 +337,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 2.5rem 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .article-content th,
 .article-content td {
