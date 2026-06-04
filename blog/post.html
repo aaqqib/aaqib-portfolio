@@ -127,6 +127,38 @@
   // Gets the slug from URL, fetches the raw HTML file,
   // parses frontmatter + markdown, renders everything
 
+  function cleanPostContent(bodyText, title) {
+    if (!bodyText || !title) return bodyText;
+    let cleaned = bodyText.trim();
+    
+    // Normalize newlines and split into lines
+    const lines = cleaned.split(/\r?\n/);
+    
+    // Find the first line that is actual content (not comments or empty lines)
+    let titleLineIdx = -1;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line || line.startsWith('<!--')) continue;
+      
+      if (line.startsWith('# ')) {
+        const lineTitle = line.slice(2).trim().toLowerCase();
+        const postTitle = title.trim().toLowerCase();
+        if (lineTitle === postTitle) {
+          titleLineIdx = i;
+        }
+      }
+      break; // Stop at the first content line
+    }
+    
+    // If we found a matching title heading line, remove it
+    if (titleLineIdx !== -1) {
+      lines.splice(titleLineIdx, 1);
+      cleaned = lines.join('\n').trim();
+    }
+    
+    return cleaned;
+  }
+
   async function loadPost() {
     // Get slug from URL ?slug=post-name or from pathname
     const params = new URLSearchParams(window.location.search);
@@ -172,10 +204,17 @@
 
       // Render body markdown → HTML
       if (fm.body) {
-        const rendered = marked.parse(fm.body);
+        const cleanedBody = cleanPostContent(fm.body, fm.title);
+        const rendered = marked.parse(cleanedBody);
         document.getElementById('post-body').innerHTML = rendered + authorBox();
       } else if (fm._rawHTML) {
-        document.getElementById('post-body').innerHTML = fm._rawHTML + authorBox();
+        let htmlContent = fm._rawHTML.trim();
+        if (fm.title) {
+          const escapedTitle = fm.title.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+          const h1Regex = new RegExp(`^\\s*(?:<!--[\\s\\S]*?-->\\s*)*<h1[^>]*>\\s*${escapedTitle}\\s*<\\/h1>\\s*`, 'i');
+          htmlContent = htmlContent.replace(h1Regex, '');
+        }
+        document.getElementById('post-body').innerHTML = htmlContent + authorBox();
       } else {
         document.getElementById('post-body').innerHTML = '<p>No content found.</p>';
       }
