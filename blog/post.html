@@ -190,6 +190,15 @@
       document.title = `${fm.title} — Aaqib Bhat`;
       document.getElementById('meta-desc').setAttribute('content', fm.description || '');
 
+      // Set canonical tag dynamically
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalLink);
+      }
+      canonicalLink.setAttribute('href', `https://aaqibbhat.com/blog/${slug}`);
+
       // Fill hero
       document.getElementById('post-title').textContent = fm.title || 'Untitled';
       document.getElementById('post-category').textContent = fm.category || 'SEO';

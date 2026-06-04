@@ -4,7 +4,7 @@
     "date": "2026-05-26",
     "category": "Paid Ads",
     "description": "A real-world case study of my first end-to-end Google Ads campaign for Thrillop Journeys: spending ₹1,250 over 4 days, achieving a 14% CTR, facing zero-impression & zero-lead problems, and critical landing page lessons learned.",
-    "url": "blog/post.html?slug=how-i-built-and-ran-my-first-google-ads-campaign",
+    "url": "/blog/how-i-built-and-ran-my-first-google-ads-campaign",
     "slug": "how-i-built-and-ran-my-first-google-ads-campaign"
   },
   {
@@ -12,7 +12,7 @@
     "date": "2026-05-13T10:00:00.000Z",
     "category": "AI & SEO",
     "description": "How artificial intelligence is reshaping the search landscape and what you need to do to stay ahead in 2026.",
-    "url": "blog/post.html?slug=the-future-of-ai-in-seo-2026",
+    "url": "/blog/the-future-of-ai-in-seo-2026",
     "slug": "the-future-of-ai-in-seo-2026"
   },
   {
@@ -20,7 +20,7 @@
     "date": "2026-03-21T14:10:59.617Z",
     "category": "Technical SEO",
     "description": "The exact 25-point technical SEO checklist I run on every new",
-    "url": "blog/post.html?slug=technical-seo-checklist-2026-25-fixes-that-actually-move-rankings",
+    "url": "/blog/technical-seo-checklist-2026-25-fixes-that-actually-move-rankings",
     "slug": "technical-seo-checklist-2026-25-fixes-that-actually-move-rankings"
   },
   {
@@ -28,7 +28,7 @@
     "date": "2026-03-20",
     "category": "Travel SEO",
     "description": "Kashmir's travel industry is booming — but most agencies are invisible on Google. Here's the exact SEO strategy I used to rank a local travel agency and grow their organic traffic by 500% in 6 months.",
-    "url": "blog/post.html?slug=seo-for-travel-agencies-kashmir",
+    "url": "/blog/seo-for-travel-agencies-kashmir",
     "slug": "seo-for-travel-agencies-kashmir"
   }
 ]

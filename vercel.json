@@ -8,5 +8,11 @@
         { "key": "Cache-Control", "value": "no-cache" }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/post.html?slug=:slug"
+    }
   ]
 }
