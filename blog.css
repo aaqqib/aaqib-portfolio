@@ -331,3 +331,34 @@
   color: var(--text-dim);
   font-size: 1rem;
 }
+
+/* ── TABLE STYLES ────────────────────────────────────────── */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 0.95rem;
+}
+.article-content th,
+.article-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.article-content th {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--text-main);
+  background: var(--bg-card);
+}
+.article-content td {
+  color: var(--text-muted);
+  font-weight: 300;
+}
+@media (max-width: 600px) {
+  .article-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
