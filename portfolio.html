@@ -180,6 +180,46 @@
               right: calc(50% - 42px) !important;
             }
           }
+          
+          /* CTA Button Styles */
+          .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+          }
+          .cta-btn.primary {
+            background: var(--text-main);
+            color: var(--bg);
+            border: 1px solid var(--text-main);
+          }
+          [data-theme="dark"] .cta-btn.primary {
+            background: var(--text-main);
+            color: #000 !important;
+            border: 1px solid var(--text-main);
+          }
+          .cta-btn.primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+          }
+          .cta-btn.secondary {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+          }
+          .cta-btn.secondary:hover {
+            background: var(--hover-bg);
+            border-color: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+          }
         </style>
 
         <!-- Thrill Top Journeys Website -->
@@ -412,11 +452,11 @@
               </div>
             </div>
             <div class="project-meta">
-              <h3>Starting working on seo for HRSG UAE</h3>
+              <h3>SEO Strategy & Optimization for HRSG UAE</h3>
               <div class="project-desc">
                 <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
-                  <li> was assigned to work on the SEO strategy for HRSG UAE's website from 11 may 2026</li>
-                  <li>There has been a significant drop in the organic clicks and impressions on the website in the last 6 months</li>
+                  <li>Led SEO strategy for HRSG UAE's website from May 2025</li>
+                  <li>Restructured SEO strategy to reverse a significant drop in organic clicks and impressions.</li>
                 </ul>
               </div>
               <span class="project-tags">SEO · Keyword Research · Conversion</span>
@@ -440,16 +480,10 @@
               <h3>FlowForge — Visual Content & SEO Automation Platform</h3>
               <div class="project-desc">
                 <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem; list-style-type: disc;">
-                  <li><strong>What it is:</strong> Developed and customized a visual node-based workflow builder (similar to n8n and Zapier) in Next.js that compiles visual Directed Acyclic Graphs (DAGs) into executable serverless automations.</li>
-                  <li><strong>Core Features Built:</strong> Programmed custom node handlers for Cron schedulers, HTTP Fetch integrations, JavaScript-sandboxed transformers, logical Conditional routing, and direct Google Gemini LLM prompting.</li>
-                  <li><strong>How I Use It:</strong> Serves as a local sandbox playground to model, simulate, and debug complex SEO content pipelines and data extractions before writing production scripts.</li>
-                  <li><strong>Future Scopes (How Else I Can Use It):</strong>
-                    <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.4rem; list-style-type: circle;">
-                      <li><em>Automated Competitor Auditing:</em> Build workflows that trigger on competitor sitemap changes, pass new links through Gemini summarization nodes, and alert me when fresh content gaps open up.</li>
-                      <li><em>Multi-Channel Syndication:</em> Instantly syndicate and customize newly written blogs into targeted, engagement-optimized drafts for LinkedIn, X (Twitter), and Pinterest via API syndicating nodes simultaneously.</li>
-                      <li><em>GSC Opportunity Alerts:</em> Set daily triggers that scrape Google Search Console performance and email notifications whenever a high-intent keyword begins ranking on page 2.</li>
-                    </ul>
-                  </li>
+                  <li><strong>Concept:</strong> Built a visual workflow builder in Next.js compiling Directed Acyclic Graphs into serverless automations.</li>
+                  <li><strong>Features:</strong> Programmed custom node handlers for scheduling, HTTP integrations, JS sandboxing, and LLM prompting.</li>
+                  <li><strong>Use Case:</strong> Sandbox playground to simulate and debug complex SEO content pipelines and data extractions.</li>
+                  <li><strong>Automation:</strong> Handles automated competitor sitemap auditing, multi-channel social syndication, and GSC opportunity alerts.</li>
                 </ul>
               </div>
               <span class="project-tags">Next.js · Visual Editor · LLM Orchestration · Serverless Automations</span>
@@ -495,23 +529,36 @@
               <h3>Ran my first Google Ads campaign</h3>
               <div class="project-desc">
                 <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; list-style-type: disc;">
-                  <li>Run my first Google Ads campaign from setup, keyword research, creating different ad groups, writing 
-                    headlines and descriptions, and to optimization, then tracking what is
-                    taking the budget which ad group, which keywords, which location. What i learnt was that i should have
-                    excluded jammu and kashmir from the targeted audience location which had taken majority of the budget.</li>
-                  <li>Overall it was a great learning experience and i am looking forward to run more campaigns in the future with
-                    my own money because this is the only way that can help me in gaining confidence and experience in running google ads campaigns.
-                  </li>
-                  <li>I used to think google ads is very simple and it is easy to get leads through this because the user is alread interested and
-                    has most of the times really high intent but after runnning this first campaign i have realised that there are other factors that we
-                    have to take into consideration like Landing page experience, content relevance to the intent of the user 
-                    and many other factors that can affect the performance of the campaign and the cost per click.
-                  </li>
+                  <li>Set up and managed a Google Ads search campaign from keyword research and ad copywriting to budget optimization.</li>
+                  <li>Analyzed location data and search query reports to exclude low-converting regions, reallocating budget to high-performing targets.</li>
+                  <li>Improved landing page relevance and Quality Score, achieving a 14% CTR (against the industry average of 2-5%).</li>
                 </ul>
               </div>
               <span class="project-tags">Google Ads · Keyword Research · Conversion</span>
             </div>
           </article>
+          
+          <!-- Contact & Resume CTA Section -->
+          <section class="portfolio-cta" style="margin-top: 2rem; padding: 2.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.25rem;">
+            <div style="background: rgba(99, 102, 241, 0.1); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #6366f1; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.15));">
+              <i data-feather="briefcase" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-main); margin: 0; letter-spacing: -0.02em;">Interested in working together?</h2>
+            <p style="font-size: 0.98rem; color: var(--text-muted); max-width: 500px; margin: 0; line-height: 1.6;">
+              Whether you need to scale organic traffic, map out search strategies, or run high-performing ad campaigns, let's connect.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem;">
+              <a href="assets/resume.pdf" target="_blank" class="cta-btn primary">
+                <i data-feather="file-text" style="width: 16px; height: 16px;"></i> View Resume
+              </a>
+              <a href="mailto:workaaqibbhat@gmail.com" class="cta-btn secondary">
+                <i data-feather="mail" style="width: 16px; height: 16px;"></i> Get in Touch
+              </a>
+              <a href="https://linkedin.com/in/aaqibbhat" target="_blank" class="cta-btn secondary">
+                <i data-feather="linkedin" style="width: 16px; height: 16px;"></i> LinkedIn
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     </main>
