@@ -500,6 +500,10 @@ h4 {
 .article-card {
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease;
+}
+.article-card:hover {
+  transform: translateY(-2px);
 }
 .article-image {
   width: 100%;
