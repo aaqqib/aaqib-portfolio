@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Aaqib Bhat SEO Portfolio",
   "scripts": {
+    "start": "npx -y http-server -p 3000",
     "build": "node generate-blog-index.js",
     "prebuild": "echo 'Generating blog index...'"
   },
